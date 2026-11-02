@@ -1,0 +1,25 @@
+{
+  "experiment": "controlled architecture ablation, common unadapted Qwen3.5-0.8B",
+  "qwen_finetuning_reproduced": false,
+  "seed": 20261102,
+  "thinking": false,
+  "decoding": "greedy",
+  "max_new_tokens": 320,
+  "requests": 7,
+  "language_enabled": true,
+  "evidence_matches": 7,
+  "prompt_matches": 7,
+  "full_assessment_matches": 7,
+  "generated_calls": 10,
+  "verified_paragraphs": {
+    "bundled": 3,
+    "separated": 3
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "torch": "2.15.0+cu132",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+    "device": "cpu",
+    "threads": 4
+  }
+}

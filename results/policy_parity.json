@@ -1,0 +1,513 @@
+{
+  "dataset_rows": 30000,
+  "boundary_cases": 29,
+  "mismatches": 0,
+  "fields_compared": [
+    "calculations",
+    "flags",
+    "risk_band_index",
+    "risk_band_one_hot",
+    "triggers",
+    "outcome_index",
+    "outcome_one_hot",
+    "final_reasons",
+    "model_probability",
+    "frozen_platt_probability"
+  ],
+  "seconds": 5.993753071001265,
+  "opa_version": "1.22.0",
+  "batches": [
+    {
+      "start": 0,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 1000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 2000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 3000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 4000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 5000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 6000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 7000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 8000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 9000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 10000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 11000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 12000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 13000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 14000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 15000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 16000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 17000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 18000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 19000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 20000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 21000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 22000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 23000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 24000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 25000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 26000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 27000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 28000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    },
+    {
+      "start": 29000,
+      "rows": 1000,
+      "mismatches": {
+        "calculations": 0,
+        "flags": 0,
+        "risk_band_index": 0,
+        "risk_band_one_hot": 0,
+        "triggers": 0,
+        "outcome_index": 0,
+        "outcome_one_hot": 0,
+        "final_reasons": 0,
+        "model_probability": 0,
+        "frozen_platt_probability": 0
+      }
+    }
+  ],
+  "boundary_mismatches": {
+    "calculations": 0,
+    "flags": 0,
+    "risk_band_index": 0,
+    "risk_band_one_hot": 0,
+    "triggers": 0,
+    "outcome_index": 0,
+    "outcome_one_hot": 0,
+    "final_reasons": 0,
+    "model_probability": 0,
+    "frozen_platt_probability": 0
+  }
+}

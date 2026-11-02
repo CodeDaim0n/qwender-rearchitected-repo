@@ -1,0 +1,75 @@
+{
+  "all_rows": {
+    "compiled_ks": 0.45824227501979053,
+    "compiled_roc_auc": 0.8054023179197498,
+    "exact_margin_matches": 0,
+    "ks_difference": 0.0,
+    "max_absolute_margin_error": 2.105733032387036e-06,
+    "maximum_signed_error": 2.105733032387036e-06,
+    "mean_absolute_margin_error": 3.2532697229036553e-07,
+    "minimum_signed_error": -2.0908587647916477e-06,
+    "native_ks": 0.45824227501979053,
+    "native_roc_auc": 0.8054023179197498,
+    "ranking": {
+      "compiled_unique_values": 29443,
+      "concordant_ordered_pairs": 449983654,
+      "native_order_collapsed_to_compiled_tie": 0,
+      "native_ordered_pairs": 449983713,
+      "native_tie_pairs": 1287,
+      "native_ties_preserved": 1260,
+      "native_ties_split": 27,
+      "native_unique_values": 29417,
+      "rank_inversions": 59,
+      "rows": 30000,
+      "total_pairs": 449985000
+    },
+    "roc_auc_difference": 0.0,
+    "root_mean_squared_margin_error": 4.1994603421026016e-07,
+    "sign_inversions": 0
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "torch": "2.15.0+cu132",
+    "xgboost": "3.1.2"
+  },
+  "fixed_point_scale": 1000000000,
+  "raw_margin_quantization_bound": 5.7e-08,
+  "runtime_seconds": 6.097873922000872,
+  "scope": "raw XGBoost margins; the compiled scorer reproduces the booster's ranking exactly",
+  "stored_test_ks": 0.43657087147578116,
+  "stored_test_roc_auc": 0.777888730385164,
+  "test": {
+    "compiled_ks": 0.43657087147578116,
+    "compiled_roc_auc": 0.777888730385164,
+    "exact_margin_matches": 0,
+    "ks_difference": 0.0,
+    "max_absolute_margin_error": 2.105733032387036e-06,
+    "maximum_signed_error": 2.105733032387036e-06,
+    "mean_absolute_margin_error": 3.3251753612784557e-07,
+    "minimum_signed_error": -2.0908587647916477e-06,
+    "native_ks": 0.43657087147578116,
+    "native_roc_auc": 0.777888730385164,
+    "ranking": {
+      "compiled_unique_values": 4475,
+      "concordant_ordered_pairs": 10122721,
+      "native_order_collapsed_to_compiled_tie": 0,
+      "native_ordered_pairs": 10122722,
+      "native_tie_pairs": 28,
+      "native_ties_preserved": 28,
+      "native_ties_split": 0,
+      "native_unique_values": 4475,
+      "rank_inversions": 1,
+      "rows": 4500,
+      "total_pairs": 10122750
+    },
+    "roc_auc_difference": 0.0,
+    "root_mean_squared_margin_error": 4.336896787572049e-07,
+    "sign_inversions": 0
+  },
+  "threshold_equivalence": {
+    "boundary_integer_comparisons": 6780,
+    "boundary_integer_mismatches": 0,
+    "observed_integer_comparisons": 11952477,
+    "observed_integer_mismatches": 0
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "compiled_local_accuracy_residual": {
+    "max_absolute_fixed_units": 0
+  },
+  "compiled_margin_vs_native_margin": {
+    "max_absolute_error": 2.105733032387036e-06
+  },
+  "feature_metrics": [
+    {
+      "feature_index": 0,
+      "feature_name": "LIMIT_BAL",
+      "max_absolute_error": 2.201979827920475e-07,
+      "mean_absolute_error": 2.5973537540048904e-08
+    },
+    {
+      "feature_index": 1,
+      "feature_name": "SEX",
+      "max_absolute_error": 2.0358329771985595e-08,
+      "mean_absolute_error": 2.9032020541561197e-09
+    },
+    {
+      "feature_index": 2,
+      "feature_name": "EDUCATION",
+      "max_absolute_error": 3.2267233274207996e-07,
+      "mean_absolute_error": 4.405070318055581e-09
+    },
+    {
+      "feature_index": 3,
+      "feature_name": "MARRIAGE",
+      "max_absolute_error": 2.888425827685115e-08,
+      "mean_absolute_error": 3.8596438643035154e-09
+    },
+    {
+      "feature_index": 4,
+      "feature_name": "AGE",
+      "max_absolute_error": 8.437705421512898e-08,
+      "mean_absolute_error": 3.6394628182343606e-09
+    },
+    {
+      "feature_index": 5,
+      "feature_name": "PAY_0",
+      "max_absolute_error": 8.270782472230565e-07,
+      "mean_absolute_error": 5.818685141717061e-08
+    },
+    {
+      "feature_index": 6,
+      "feature_name": "PAY_2",
+      "max_absolute_error": 2.042238463895174e-07,
+      "mean_absolute_error": 7.518372969642979e-09
+    },
+    {
+      "feature_index": 7,
+      "feature_name": "PAY_3",
+      "max_absolute_error": 1.821311950700455e-07,
+      "mean_absolute_error": 9.215196063927019e-09
+    },
+    {
+      "feature_index": 8,
+      "feature_name": "PAY_4",
+      "max_absolute_error": 7.49210052330973e-08,
+      "mean_absolute_error": 2.2569342098587745e-09
+    },
+    {
+      "feature_index": 9,
+      "feature_name": "PAY_5",
+      "max_absolute_error": 1.0666368105427537e-07,
+      "mean_absolute_error": 4.345926654741431e-09
+    },
+    {
+      "feature_index": 10,
+      "feature_name": "PAY_6",
+      "max_absolute_error": 1.2387814329883895e-07,
+      "mean_absolute_error": 6.180929394257864e-09
+    },
+    {
+      "feature_index": 11,
+      "feature_name": "BILL_AMT1",
+      "max_absolute_error": 1.9307221982289846e-07,
+      "mean_absolute_error": 1.9956788039014827e-08
+    },
+    {
+      "feature_index": 12,
+      "feature_name": "BILL_AMT2",
+      "max_absolute_error": 5.2740615846813554e-08,
+      "mean_absolute_error": 3.2370830162507546e-09
+    },
+    {
+      "feature_index": 13,
+      "feature_name": "BILL_AMT3",
+      "max_absolute_error": 1.0768496705448882e-07,
+      "mean_absolute_error": 5.697681734630807e-09
+    },
+    {
+      "feature_index": 14,
+      "feature_name": "BILL_AMT4",
+      "max_absolute_error": 7.101846311030613e-08,
+      "mean_absolute_error": 3.627897915319357e-09
+    },
+    {
+      "feature_index": 15,
+      "feature_name": "BILL_AMT5",
+      "max_absolute_error": 1.8843940734203368e-08,
+      "mean_absolute_error": 2.105591040228071e-09
+    },
+    {
+      "feature_index": 16,
+      "feature_name": "BILL_AMT6",
+      "max_absolute_error": 3.251664353054462e-08,
+      "mean_absolute_error": 2.271874639789003e-09
+    },
+    {
+      "feature_index": 17,
+      "feature_name": "PAY_AMT1",
+      "max_absolute_error": 1.88766098030424e-07,
+      "mean_absolute_error": 2.1736955334309055e-08
+    },
+    {
+      "feature_index": 18,
+      "feature_name": "PAY_AMT2",
+      "max_absolute_error": 3.8619244380200257e-07,
+      "mean_absolute_error": 7.247978425192792e-08
+    },
+    {
+      "feature_index": 19,
+      "feature_name": "PAY_AMT3",
+      "max_absolute_error": 7.77797088402643e-08,
+      "mean_absolute_error": 9.190782978245085e-09
+    },
+    {
+      "feature_index": 20,
+      "feature_name": "PAY_AMT4",
+      "max_absolute_error": 8.372937773670763e-08,
+      "mean_absolute_error": 9.159692254616701e-09
+    },
+    {
+      "feature_index": 21,
+      "feature_name": "PAY_AMT5",
+      "max_absolute_error": 8.087619018937175e-08,
+      "mean_absolute_error": 3.251979878690409e-09
+    },
+    {
+      "feature_index": 22,
+      "feature_name": "PAY_AMT6",
+      "max_absolute_error": 6.894767762277709e-08,
+      "mean_absolute_error": 6.092394236396566e-09
+    },
+    {
+      "feature_index": 23,
+      "feature_name": "BIAS",
+      "max_absolute_error": 4.004516718225659e-10,
+      "mean_absolute_error": 4.004516718225659e-10
+    }
+  ],
+  "global_max_absolute_error": 8.270782472230565e-07,
+  "global_mean_absolute_error": 1.1987253512318261e-08,
+  "native_local_accuracy_residual": {
+    "max_absolute": 2.2673048079013824e-06
+  },
+  "rows": 30000,
+  "runtime_seconds": 17.23139752499992,
+  "total_regions": 344106
+}

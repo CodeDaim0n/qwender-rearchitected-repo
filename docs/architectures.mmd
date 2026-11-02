@@ -1,0 +1,18 @@
+flowchart TD
+  subgraph Original["Original: one checkpoint artifact"]
+    A["Typed application"] --> B["Fixed-point scorer and TreeSHAP"]
+    B --> C["Compiled credit policy"]
+    C --> D["Recourse and evidence"]
+    D --> E["Qwen writer and verifier"]
+    E --> F["Assessment JSON and receipt"]
+  end
+  subgraph Separated["Our component architecture"]
+    G["Approved evidence and version graph"] --> H["Trusted context"]
+    H --> I["Independent scorer and attribution"]
+    I --> J["OPA credit policy"]
+    J --> K["Evidence and recourse"]
+    K --> L["Same Qwen writer and verifier"]
+    L --> M["Authorization and context recheck"]
+    M --> N["Idempotent sandbox ledger"]
+    N --> O["Timestamped lineage graph"]
+  end

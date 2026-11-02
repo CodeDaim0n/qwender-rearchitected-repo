@@ -1,0 +1,12 @@
+{
+  "case": "independently approved policy change",
+  "before_outcome": "DEMO_DECLINE",
+  "after_outcome": "MANUAL_REVIEW",
+  "before_margin": 842436674,
+  "after_margin": 842436674,
+  "scorer_sha256_before": "d8ae5b499126871a90a4b4f9fff88dc366ed9c813aadeace87e91054ea9b09fb",
+  "scorer_sha256_after": "d8ae5b499126871a90a4b4f9fff88dc366ed9c813aadeace87e91054ea9b09fb",
+  "qwen_loaded": false,
+  "language_weights_changed": false,
+  "approval": "synthetic local registry update, not real institutional approval"
+}

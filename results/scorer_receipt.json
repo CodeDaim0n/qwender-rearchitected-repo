@@ -1,0 +1,1 @@
+{"algorithm":"sha256","compiled_sha256":"447aa26e2da4ee4f1918948948f73a25eb6fe1564692f7a00e8a3bf7a462b1fc","ir_sha256":["65b8aa50e08d698b0b336f8e4e76d0d7ec672a507705ec3d753f7d5b6f17e9dd"],"manifest_sha256":"b994306f3c1befcbac3201220eae8f55d4c3339d317990d376d70d77fce31fba","model_version":"xgboost-uci-v1","policy_version":"raw-margin-zero-v1"}

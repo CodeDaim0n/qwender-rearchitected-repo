@@ -1,0 +1,84 @@
+{
+  "case": "malformed_string_value",
+  "request": {
+    "action": "ASSESS",
+    "credit": {
+      "LIMIT_BAL": 200000,
+      "SEX": 2,
+      "EDUCATION": 2,
+      "MARRIAGE": 1,
+      "AGE": 39,
+      "PAY_0": 3,
+      "PAY_2": 2,
+      "PAY_3": 2,
+      "PAY_4": 2,
+      "PAY_5": 2,
+      "PAY_6": 0,
+      "BILL_AMT1": "117868",
+      "BILL_AMT2": 114483,
+      "BILL_AMT3": 118855,
+      "BILL_AMT4": 125357,
+      "BILL_AMT5": 121853,
+      "BILL_AMT6": 124731,
+      "PAY_AMT1": 0,
+      "PAY_AMT2": 6216,
+      "PAY_AMT3": 10000,
+      "PAY_AMT4": 0,
+      "PAY_AMT5": 5000,
+      "PAY_AMT6": 4552
+    }
+  },
+  "arms": {
+    "bundled": {
+      "assessment": {
+        "protocol": "compiled-credit-llm/assessment-v1",
+        "status": "REFUSE",
+        "refusal_class": "MALFORMED_TYPE",
+        "reason": "Raw credit values must be integers or explicit nulls.",
+        "language_model_invoked": false,
+        "receipt": "RECEIPT1|status=REFUSE|e=MALFORMED_TYPE|n=Raw credit values must be integers or explicit nulls.|d=SYNTHETIC_NONREGULATORY_ASSOCIATIVE_NOT_CAUSAL"
+      },
+      "evidence": null,
+      "prompt": null,
+      "seconds": 5.1775999963865615e-05,
+      "generation_invoked": false,
+      "generation": null
+    },
+    "separated": {
+      "assessment": {
+        "protocol": "compiled-credit-llm/assessment-v1",
+        "status": "REFUSE",
+        "refusal_class": "MALFORMED_TYPE",
+        "reason": "Raw credit values must be integers or explicit nulls.",
+        "language_model_invoked": false,
+        "receipt": "RECEIPT1|status=REFUSE|e=MALFORMED_TYPE|n=Raw credit values must be integers or explicit nulls.|d=SYNTHETIC_NONREGULATORY_ASSOCIATIVE_NOT_CAUSAL"
+      },
+      "evidence": null,
+      "prompt": null,
+      "seconds": 7.531099981861189e-05,
+      "generation_invoked": false,
+      "generation": null,
+      "trusted_context": {
+        "request_hash": "4687f7b6a74273b87cf267875af9829c7dbc69387aa928b0f48c714666ecf22c",
+        "context": {
+          "policy": "policy-v1",
+          "source": "approved-bureau",
+          "evidence_age_hours": 1,
+          "tenant": "tenant-a",
+          "evidence_tenant": "tenant-a",
+          "principal": "credit-officer"
+        },
+        "components": {
+          "scorer": "d8ae5b499126871a90a4b4f9fff88dc366ed9c813aadeace87e91054ea9b09fb",
+          "policy": "a0b354b41b16f21c1fbb02f63aeae22037f2236589e3ba0cdd3e7d6a10e16529",
+          "rego": "596412ad483253cbe50deddd2b2dc59e8b0fd255dd7da269f392eb0edf7c4e8f"
+        },
+        "registry_version": 1,
+        "context_hash": "6f7e95bb84e68bfb5c8c4b0149008f6b4c557ba103581f7b38cdf3940e902c07"
+      }
+    }
+  },
+  "evidence_identical": true,
+  "prompt_identical": true,
+  "assessment_identical": true
+}

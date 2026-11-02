@@ -1,0 +1,4025 @@
+{
+  "attribution_local_tolerance_fixed": 0,
+  "attribution_sha256": "fee2e37f093b5add065954aaf24835228483769f29bfad688699ae9d9b1afa54",
+  "attribution_tree_specs": [
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 384
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 512
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 162
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 3072
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 2304
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 4
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 2160
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 5184
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 4608
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        }
+      ],
+      "region_count": 2048
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 3456
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 2592
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 3456
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 2304
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 9216
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 3456
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 3456
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 6912
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        }
+      ],
+      "region_count": 6912
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        }
+      ],
+      "region_count": 4608
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 3
+        }
+      ],
+      "region_count": 9216
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 4096
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 2304
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 10368
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 2304
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 9216
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 1024
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 2304
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 13824
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 4608
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 13824
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 13824
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 576
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 13824
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 4608
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 4096
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 192
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 864
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 1536
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 256
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 256
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 4608
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 3456
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 192
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 512
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 1296
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 288
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 13824
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 216
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 288
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 4096
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 192
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 1536
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 7776
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 144
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 192
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 2304
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 256
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 2304
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 216
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 384
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 3072
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 4
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 2880
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 4608
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 9216
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 576
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 4
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 5760
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 1536
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 4
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 2560
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 2304
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 5184
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 384
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 192
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 288
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 128
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 4
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 2160
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 384
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 1728
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 256
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 10368
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 216
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 144
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 4608
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 1152
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 1152
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 6912
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 216
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 4608
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 10368
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 432
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 144
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 432
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 1728
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 128
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 576
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 4
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        }
+      ],
+      "region_count": 1920
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 576
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 3
+        }
+      ],
+      "region_count": 4608
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 192
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 96
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 1024
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 108
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 1296
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 384
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 4608
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 288
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 64
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 3072
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 9216
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 972
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 4
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        }
+      ],
+      "region_count": 1440
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 5
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 3456
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 3
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 288
+    },
+    {
+      "features": [
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 1
+        },
+        {
+          "threshold_count": 2
+        }
+      ],
+      "region_count": 96
+    }
+  ],
+  "authority": "COMPILED_XGBOOST_SCORER",
+  "buffer_specs": {
+    "approve_gte": {
+      "dtype": "torch.float64",
+      "shape": []
+    },
+    "calibration": {
+      "dtype": "torch.float64",
+      "shape": [
+        3
+      ]
+    },
+    "experts": [
+      {
+        "base_score": {
+          "dtype": "torch.float64",
+          "shape": []
+        },
+        "edge_left": {
+          "dtype": "torch.float64",
+          "shape": [
+            1469,
+            4
+          ]
+        },
+        "feature_index": {
+          "dtype": "torch.int64",
+          "shape": [
+            1469,
+            4
+          ]
+        },
+        "leaf_reason": {
+          "dtype": "torch.float64",
+          "shape": [
+            1469,
+            0
+          ]
+        },
+        "leaf_value": {
+          "dtype": "torch.float64",
+          "shape": [
+            1469
+          ]
+        },
+        "missing_left": {
+          "dtype": "torch.float64",
+          "shape": [
+            1469,
+            4
+          ]
+        },
+        "path_length": {
+          "dtype": "torch.float64",
+          "shape": [
+            1469
+          ]
+        },
+        "path_mask": {
+          "dtype": "torch.float64",
+          "shape": [
+            1469,
+            4
+          ]
+        },
+        "threshold": {
+          "dtype": "torch.float64",
+          "shape": [
+            1469,
+            4
+          ]
+        }
+      }
+    ],
+    "grade_bounds": {
+      "dtype": "torch.float64",
+      "shape": [
+        2,
+        2
+      ]
+    },
+    "output_bounds": {
+      "dtype": "torch.float64",
+      "shape": [
+        2
+      ]
+    },
+    "policy_threshold": {
+      "dtype": "torch.float64",
+      "shape": []
+    },
+    "routing_denominator": {
+      "dtype": "torch.float64",
+      "shape": []
+    },
+    "routing_weights": {
+      "dtype": "torch.float64",
+      "shape": [
+        1
+      ]
+    }
+  },
+  "checkpoint_format_version": "compiled-credit-llm/v1",
+  "compiled_sha256": "5cbc610ab07920225486b866cd751326132939f898df2802fefe24593a4dd5f9",
+  "evidence_contract": "compiled-credit-evidence/v1",
+  "expert_count": 1,
+  "feature_count": 23,
+  "feature_maximums": [
+    1000000,
+    2,
+    6,
+    3,
+    79,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    964511,
+    983931,
+    1664089,
+    891586,
+    927171,
+    961664,
+    873552,
+    1684259,
+    896040,
+    621000,
+    426529,
+    528666
+  ],
+  "feature_minimums": [
+    10000,
+    1,
+    0,
+    0,
+    21,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -165580,
+    -69777,
+    -157264,
+    -170000,
+    -81334,
+    -339603,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "feature_names": [
+    "LIMIT_BAL",
+    "SEX",
+    "EDUCATION",
+    "MARRIAGE",
+    "AGE",
+    "PAY_0",
+    "PAY_2",
+    "PAY_3",
+    "PAY_4",
+    "PAY_5",
+    "PAY_6",
+    "BILL_AMT1",
+    "BILL_AMT2",
+    "BILL_AMT3",
+    "BILL_AMT4",
+    "BILL_AMT5",
+    "BILL_AMT6",
+    "PAY_AMT1",
+    "PAY_AMT2",
+    "PAY_AMT3",
+    "PAY_AMT4",
+    "PAY_AMT5",
+    "PAY_AMT6"
+  ],
+  "feature_scales": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "grade_labels": [
+    "NEGATIVE_MARGIN",
+    "NONNEGATIVE_MARGIN"
+  ],
+  "ir_sha256": [
+    "65b8aa50e08d698b0b336f8e4e76d0d7ec672a507705ec3d753f7d5b6f17e9dd"
+  ],
+  "manifest_sha256": "b994306f3c1befcbac3201220eae8f55d4c3339d317990d376d70d77fce31fba",
+  "max_model_reasons": 4,
+  "missing_allowed": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "model_version": "xgboost-uci-v1",
+  "output_scale": 1000000000,
+  "policy_calculation_names": [
+    "current_utilization_bp",
+    "maximum_utilization_bp",
+    "average_utilization_bp",
+    "delinquency_count",
+    "repeated_delinquency",
+    "maximum_delinquency_severity",
+    "payment_coverage_bp",
+    "bill_trend_bp",
+    "bill_mean_absolute_deviation",
+    "payment_mean_absolute_deviation",
+    "zero_payment_high_utilization",
+    "positive_bill_total",
+    "payment_total"
+  ],
+  "policy_flag_names": [
+    "missing_input",
+    "hard_contract_invalid",
+    "out_of_development_range",
+    "unknown_demographic_category",
+    "undocumented_repayment_code",
+    "nonfinite_or_type_invalid"
+  ],
+  "policy_id": "UCI_DEMO_POLICY_v1",
+  "policy_outcome_names": [
+    "INVALID_INPUT",
+    "DEMO_DECLINE",
+    "MANUAL_REVIEW",
+    "APPROVE_WITH_CONTROLS",
+    "APPROVE_STANDARD"
+  ],
+  "policy_sha256": "74abf7ae7aad40b77fe71cfff5b0981260342e92315e81df54b048424f210f40",
+  "policy_status": "SYNTHETIC_DEMONSTRATION_ONLY",
+  "policy_trigger_names": [
+    "INVALID_MISSING",
+    "INVALID_CONTRACT",
+    "DECLINE_SEVERE_DELINQUENCY",
+    "DECLINE_ZERO_PAYMENT_HIGH_UTILIZATION",
+    "DECLINE_EXTREME_UTILIZATION_WITH_DELINQUENCY",
+    "REVIEW_UNKNOWN_CATEGORY",
+    "REVIEW_OUT_OF_DEVELOPMENT_RANGE",
+    "REVIEW_HIGH_MODEL_RISK",
+    "REVIEW_MULTIPLE_SOFT_TRIGGERS",
+    "CONTROL_REPEATED_DELINQUENCY",
+    "CONTROL_HIGH_UTILIZATION",
+    "CONTROL_LOW_PAYMENT_COVERAGE",
+    "CONTROL_RISING_BILL_TREND",
+    "CONTROL_ELEVATED_MODEL_RISK",
+    "APPROVE_STANDARD_NO_ADVERSE_TRIGGER"
+  ],
+  "policy_version": "UCI_DEMO_POLICY_v1",
+  "policy_warning": "Not a real bank policy, credit policy recommendation, lending standard, or regulatory adverse-action framework.",
+  "probability_warning": "Both are model outputs on a historical benchmark, not validated real-world probability of default.",
+  "reason_metadata": [
+    {
+      "causal": false,
+      "factual_label": "Credit limit amount",
+      "feature_index": 0,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "LIMIT_BAL",
+      "reason_code": "MODEL_CONTRIB_LIMIT_BAL",
+      "regulatory_adverse_action_reason": false
+    },
+    {
+      "causal": false,
+      "factual_label": "Recorded sex category",
+      "feature_index": 1,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "SEX",
+      "reason_code": "MODEL_CONTRIB_SEX",
+      "regulatory_adverse_action_reason": false
+    },
+    {
+      "causal": false,
+      "factual_label": "Recorded education category",
+      "feature_index": 2,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "EDUCATION",
+      "reason_code": "MODEL_CONTRIB_EDUCATION",
+      "regulatory_adverse_action_reason": false
+    },
+    {
+      "causal": false,
+      "factual_label": "Recorded marital-status category",
+      "feature_index": 3,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "MARRIAGE",
+      "reason_code": "MODEL_CONTRIB_MARRIAGE",
+      "regulatory_adverse_action_reason": false
+    },
+    {
+      "causal": false,
+      "factual_label": "Age in years",
+      "feature_index": 4,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "AGE",
+      "reason_code": "MODEL_CONTRIB_AGE",
+      "regulatory_adverse_action_reason": false
+    },
+    {
+      "causal": false,
+      "factual_label": "Most recent repayment status",
+      "feature_index": 5,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "PAY_0",
+      "reason_code": "MODEL_CONTRIB_PAY_0",
+      "regulatory_adverse_action_reason": false
+    },
+    {
+      "causal": false,
+      "factual_label": "Repayment status two months ago",
+      "feature_index": 6,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "PAY_2",
+      "reason_code": "MODEL_CONTRIB_PAY_2",
+      "regulatory_adverse_action_reason": false
+    },
+    {
+      "causal": false,
+      "factual_label": "Repayment status three months ago",
+      "feature_index": 7,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "PAY_3",
+      "reason_code": "MODEL_CONTRIB_PAY_3",
+      "regulatory_adverse_action_reason": false
+    },
+    {
+      "causal": false,
+      "factual_label": "Repayment status four months ago",
+      "feature_index": 8,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "PAY_4",
+      "reason_code": "MODEL_CONTRIB_PAY_4",
+      "regulatory_adverse_action_reason": false
+    },
+    {
+      "causal": false,
+      "factual_label": "Repayment status five months ago",
+      "feature_index": 9,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "PAY_5",
+      "reason_code": "MODEL_CONTRIB_PAY_5",
+      "regulatory_adverse_action_reason": false
+    },
+    {
+      "causal": false,
+      "factual_label": "Repayment status six months ago",
+      "feature_index": 10,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "PAY_6",
+      "reason_code": "MODEL_CONTRIB_PAY_6",
+      "regulatory_adverse_action_reason": false
+    },
+    {
+      "causal": false,
+      "factual_label": "Most recent statement balance",
+      "feature_index": 11,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "BILL_AMT1",
+      "reason_code": "MODEL_CONTRIB_BILL_AMT1",
+      "regulatory_adverse_action_reason": false
+    },
+    {
+      "causal": false,
+      "factual_label": "Statement balance two months ago",
+      "feature_index": 12,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "BILL_AMT2",
+      "reason_code": "MODEL_CONTRIB_BILL_AMT2",
+      "regulatory_adverse_action_reason": false
+    },
+    {
+      "causal": false,
+      "factual_label": "Statement balance three months ago",
+      "feature_index": 13,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "BILL_AMT3",
+      "reason_code": "MODEL_CONTRIB_BILL_AMT3",
+      "regulatory_adverse_action_reason": false
+    },
+    {
+      "causal": false,
+      "factual_label": "Statement balance four months ago",
+      "feature_index": 14,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "BILL_AMT4",
+      "reason_code": "MODEL_CONTRIB_BILL_AMT4",
+      "regulatory_adverse_action_reason": false
+    },
+    {
+      "causal": false,
+      "factual_label": "Statement balance five months ago",
+      "feature_index": 15,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "BILL_AMT5",
+      "reason_code": "MODEL_CONTRIB_BILL_AMT5",
+      "regulatory_adverse_action_reason": false
+    },
+    {
+      "causal": false,
+      "factual_label": "Statement balance six months ago",
+      "feature_index": 16,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "BILL_AMT6",
+      "reason_code": "MODEL_CONTRIB_BILL_AMT6",
+      "regulatory_adverse_action_reason": false
+    },
+    {
+      "causal": false,
+      "factual_label": "Most recent payment amount",
+      "feature_index": 17,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "PAY_AMT1",
+      "reason_code": "MODEL_CONTRIB_PAY_AMT1",
+      "regulatory_adverse_action_reason": false
+    },
+    {
+      "causal": false,
+      "factual_label": "Payment amount two months ago",
+      "feature_index": 18,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "PAY_AMT2",
+      "reason_code": "MODEL_CONTRIB_PAY_AMT2",
+      "regulatory_adverse_action_reason": false
+    },
+    {
+      "causal": false,
+      "factual_label": "Payment amount three months ago",
+      "feature_index": 19,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "PAY_AMT3",
+      "reason_code": "MODEL_CONTRIB_PAY_AMT3",
+      "regulatory_adverse_action_reason": false
+    },
+    {
+      "causal": false,
+      "factual_label": "Payment amount four months ago",
+      "feature_index": 20,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "PAY_AMT4",
+      "reason_code": "MODEL_CONTRIB_PAY_AMT4",
+      "regulatory_adverse_action_reason": false
+    },
+    {
+      "causal": false,
+      "factual_label": "Payment amount five months ago",
+      "feature_index": 21,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "PAY_AMT5",
+      "reason_code": "MODEL_CONTRIB_PAY_AMT5",
+      "regulatory_adverse_action_reason": false
+    },
+    {
+      "causal": false,
+      "factual_label": "Payment amount six months ago",
+      "feature_index": 22,
+      "negative_direction": "decreases model raw margin (lower modeled default risk)",
+      "positive_direction": "increases model raw margin (higher modeled default risk)",
+      "raw_feature_name": "PAY_AMT6",
+      "reason_code": "MODEL_CONTRIB_PAY_AMT6",
+      "regulatory_adverse_action_reason": false
+    }
+  ],
+  "risk_band_names": [
+    "LOW",
+    "MODERATE",
+    "ELEVATED",
+    "HIGH"
+  ],
+  "scoring_compiled_sha256": "447aa26e2da4ee4f1918948948f73a25eb6fe1564692f7a00e8a3bf7a462b1fc"
+}

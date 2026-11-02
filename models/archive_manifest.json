@@ -1,0 +1,26 @@
+{
+  "archive": "Credit_Architecture_Lab_Full_Model_Bundle.tar",
+  "parts": [
+    {
+      "name": "Credit_Architecture_Model_Bundle.tar.part-001",
+      "bytes": 475000000,
+      "sha256": "bb1f0098aea2bcd22eac4ab30ebdb9f25208cbff71b166c45fd00b7ed8e498ff"
+    },
+    {
+      "name": "Credit_Architecture_Model_Bundle.tar.part-002",
+      "bytes": 475000000,
+      "sha256": "a403b3e59672b20475bdf85766fe7be6b4a288f7b9ab3350ededcb543c26a350"
+    },
+    {
+      "name": "Credit_Architecture_Model_Bundle.tar.part-003",
+      "bytes": 475000000,
+      "sha256": "1819682abf3e00322adfc200d92edfe8b0251da0cfd0b0536e7da79b6b3ee755"
+    },
+    {
+      "name": "Credit_Architecture_Model_Bundle.tar.part-004",
+      "bytes": 473915840,
+      "sha256": "7322343dab5db224139730469f8ddde4481d35f64f2b21294b0189888feb5c44"
+    }
+  ],
+  "restore_command": "python scripts/restore_model_bundle.py /path/to/downloaded/parts --extract"
+}

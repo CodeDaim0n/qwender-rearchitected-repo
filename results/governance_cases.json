@@ -1,0 +1,206 @@
+[
+  {
+    "case": "valid_record",
+    "context": {
+      "policy": "policy-v1",
+      "source": "approved-bureau",
+      "evidence_age_hours": 1,
+      "tenant": "tenant-a",
+      "evidence_tenant": "tenant-a",
+      "principal": "credit-officer"
+    },
+    "mutation": null,
+    "expected": "RECORDED",
+    "separated_response": "RECORDED",
+    "passed": true,
+    "baseline_control_response": "NOT_IMPLEMENTED_IN_UPSTREAM_ASSESSMENT_API",
+    "sandbox_records": 1
+  },
+  {
+    "case": "stale_policy",
+    "context": {
+      "policy": "policy-old",
+      "source": "approved-bureau",
+      "evidence_age_hours": 1,
+      "tenant": "tenant-a",
+      "evidence_tenant": "tenant-a",
+      "principal": "credit-officer"
+    },
+    "mutation": null,
+    "expected": "STALE_POLICY",
+    "separated_response": "STALE_POLICY",
+    "passed": true,
+    "baseline_control_response": "NOT_IMPLEMENTED_IN_UPSTREAM_ASSESSMENT_API",
+    "sandbox_records": 0
+  },
+  {
+    "case": "stale_evidence",
+    "context": {
+      "policy": "policy-v1",
+      "source": "approved-bureau",
+      "evidence_age_hours": 25,
+      "tenant": "tenant-a",
+      "evidence_tenant": "tenant-a",
+      "principal": "credit-officer"
+    },
+    "mutation": null,
+    "expected": "STALE_EVIDENCE",
+    "separated_response": "STALE_EVIDENCE",
+    "passed": true,
+    "baseline_control_response": "NOT_IMPLEMENTED_IN_UPSTREAM_ASSESSMENT_API",
+    "sandbox_records": 0
+  },
+  {
+    "case": "untrusted_source",
+    "context": {
+      "policy": "policy-v1",
+      "source": "unknown",
+      "evidence_age_hours": 1,
+      "tenant": "tenant-a",
+      "evidence_tenant": "tenant-a",
+      "principal": "credit-officer"
+    },
+    "mutation": null,
+    "expected": "UNTRUSTED_SOURCE",
+    "separated_response": "UNTRUSTED_SOURCE",
+    "passed": true,
+    "baseline_control_response": "NOT_IMPLEMENTED_IN_UPSTREAM_ASSESSMENT_API",
+    "sandbox_records": 0
+  },
+  {
+    "case": "wrong_tenant",
+    "context": {
+      "policy": "policy-v1",
+      "source": "approved-bureau",
+      "evidence_age_hours": 1,
+      "tenant": "tenant-a",
+      "evidence_tenant": "tenant-b",
+      "principal": "credit-officer"
+    },
+    "mutation": null,
+    "expected": "CROSS_TENANT_EVIDENCE",
+    "separated_response": "CROSS_TENANT_EVIDENCE",
+    "passed": true,
+    "baseline_control_response": "NOT_IMPLEMENTED_IN_UPSTREAM_ASSESSMENT_API",
+    "sandbox_records": 0
+  },
+  {
+    "case": "unprivileged_principal",
+    "context": {
+      "policy": "policy-v1",
+      "source": "approved-bureau",
+      "evidence_age_hours": 1,
+      "tenant": "tenant-a",
+      "evidence_tenant": "tenant-a",
+      "principal": "outsider"
+    },
+    "mutation": null,
+    "expected": "ASSESSMENT_NOT_AUTHORIZED",
+    "separated_response": "ASSESSMENT_NOT_AUTHORIZED",
+    "passed": true,
+    "baseline_control_response": "NOT_IMPLEMENTED_IN_UPSTREAM_ASSESSMENT_API",
+    "sandbox_records": 0
+  },
+  {
+    "case": "assess_only_principal",
+    "context": {
+      "policy": "policy-v1",
+      "source": "approved-bureau",
+      "evidence_age_hours": 1,
+      "tenant": "tenant-a",
+      "evidence_tenant": "tenant-a",
+      "principal": "analyst"
+    },
+    "mutation": null,
+    "expected": "WRITE_NOT_AUTHORIZED",
+    "separated_response": "WRITE_NOT_AUTHORIZED",
+    "passed": true,
+    "baseline_control_response": "NOT_IMPLEMENTED_IN_UPSTREAM_ASSESSMENT_API",
+    "sandbox_records": 0
+  },
+  {
+    "case": "missing_approval",
+    "context": {
+      "policy": "policy-v1",
+      "source": "approved-bureau",
+      "evidence_age_hours": 1,
+      "tenant": "tenant-a",
+      "evidence_tenant": "tenant-a",
+      "principal": "credit-officer"
+    },
+    "mutation": "remove_approval",
+    "expected": "MISSING_POLICY_APPROVAL",
+    "separated_response": "MISSING_POLICY_APPROVAL",
+    "passed": true,
+    "baseline_control_response": "NOT_IMPLEMENTED_IN_UPSTREAM_ASSESSMENT_API",
+    "sandbox_records": 0
+  },
+  {
+    "case": "changed_request",
+    "context": {
+      "policy": "policy-v1",
+      "source": "approved-bureau",
+      "evidence_age_hours": 1,
+      "tenant": "tenant-a",
+      "evidence_tenant": "tenant-a",
+      "principal": "credit-officer"
+    },
+    "mutation": "change_request",
+    "expected": "CONTEXT_CHANGED_BEFORE_WRITE",
+    "separated_response": "CONTEXT_CHANGED_BEFORE_WRITE",
+    "passed": true,
+    "baseline_control_response": "NOT_IMPLEMENTED_IN_UPSTREAM_ASSESSMENT_API",
+    "sandbox_records": 0
+  },
+  {
+    "case": "policy_changed_in_flight",
+    "context": {
+      "policy": "policy-v1",
+      "source": "approved-bureau",
+      "evidence_age_hours": 1,
+      "tenant": "tenant-a",
+      "evidence_tenant": "tenant-a",
+      "principal": "credit-officer"
+    },
+    "mutation": "change_registry",
+    "expected": "CONTEXT_CHANGED_BEFORE_WRITE",
+    "separated_response": "CONTEXT_CHANGED_BEFORE_WRITE",
+    "passed": true,
+    "baseline_control_response": "NOT_IMPLEMENTED_IN_UPSTREAM_ASSESSMENT_API",
+    "sandbox_records": 0
+  },
+  {
+    "case": "retry_same_write",
+    "context": {
+      "policy": "policy-v1",
+      "source": "approved-bureau",
+      "evidence_age_hours": 1,
+      "tenant": "tenant-a",
+      "evidence_tenant": "tenant-a",
+      "principal": "credit-officer"
+    },
+    "mutation": "retry",
+    "expected": "ALREADY_RECORDED",
+    "separated_response": "ALREADY_RECORDED",
+    "passed": true,
+    "baseline_control_response": "NOT_IMPLEMENTED_IN_UPSTREAM_ASSESSMENT_API",
+    "sandbox_records": 1
+  },
+  {
+    "case": "retry_conflicting_write",
+    "context": {
+      "policy": "policy-v1",
+      "source": "approved-bureau",
+      "evidence_age_hours": 1,
+      "tenant": "tenant-a",
+      "evidence_tenant": "tenant-a",
+      "principal": "credit-officer"
+    },
+    "mutation": "conflict",
+    "expected": "IDEMPOTENCY_CONFLICT",
+    "separated_response": "IDEMPOTENCY_CONFLICT",
+    "passed": true,
+    "baseline_control_response": "NOT_IMPLEMENTED_IN_UPSTREAM_ASSESSMENT_API",
+    "sandbox_records": 1
+  }
+]

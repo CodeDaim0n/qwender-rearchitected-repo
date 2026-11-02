@@ -1,0 +1,154 @@
+{
+  "nodes": [
+    {
+      "id": "credit-v1",
+      "kind": "release"
+    },
+    {
+      "id": "policy-v1",
+      "kind": "policy"
+    },
+    {
+      "id": "approval-v1",
+      "kind": "approval"
+    },
+    {
+      "id": "approval_with_controls",
+      "kind": "assessment",
+      "case_id": "approval_with_controls",
+      "timestamp": "2026-11-02T00:22:13.291509+00:00",
+      "context_hash": "e9440b62960741ee182a337950df419295a6b6f020646c3c3ec544997f79a559",
+      "assessment_hash": "6f7027c035385399084b9fbc41f6583f282868cffb63d39bf99095e117722b74",
+      "previous_event_hash": null
+    },
+    {
+      "id": "8a2f98db001966d79dfecab43f2a53ac2190661a98746787c1ae9d1d29f905b3",
+      "kind": "evidence",
+      "source": "approved-bureau"
+    },
+    {
+      "id": "decline_close_to_approval",
+      "kind": "assessment",
+      "case_id": "decline_close_to_approval",
+      "timestamp": "2026-11-02T00:22:51.435600+00:00",
+      "context_hash": "6976e135a976eda8cb1dfa40fbda8e9f949ccaba5d1d6b1889bdcbb51319fab4",
+      "assessment_hash": "2c1938cbe3a64bec6a07a76d5e093baf97a8f6cdba2bf23bf86f8e67e19ca7f1",
+      "previous_event_hash": "38518a9ba7875f81de85c7f6b53728d71647f73fe8d26ed77e0d3b3a76ea7a4d"
+    },
+    {
+      "id": "9411db5ba27e3f6a3bc5fe1c4e7119cf8021ef745c7bfa360f1e4fab65cac1d9",
+      "kind": "evidence",
+      "source": "approved-bureau"
+    },
+    {
+      "id": "manual_review_not_behavioural",
+      "kind": "assessment",
+      "case_id": "manual_review_not_behavioural",
+      "timestamp": "2026-11-02T00:24:22.286857+00:00",
+      "context_hash": "63d162e63d6e571a6c77f8c2ae60ab2c16a71c8de5c3d7c05400e1f0903dbbe4",
+      "assessment_hash": "0653f41a19756e033dc831defc2e6f853de123b0fa663628de98e17aae29d192",
+      "previous_event_hash": "1dbe4f24c1a68dd7e422814f42006412ae08fc92b77c62be7a78a9df84fe5a4c"
+    },
+    {
+      "id": "bbc3862aff6df8ace90e3202cf9b8e2034e779e82fad4897e1960bda9f66edaa",
+      "kind": "evidence",
+      "source": "approved-bureau"
+    },
+    {
+      "id": "standard_approval",
+      "kind": "assessment",
+      "case_id": "standard_approval",
+      "timestamp": "2026-11-02T00:24:50.565493+00:00",
+      "context_hash": "b3db0d2793b047a8ab1547919fc60094aaf903064ec765fddfbe9cda3e3cd739",
+      "assessment_hash": "bbcdef75b8a534b95c727108b6946fa473b777b466e332b8e5c1df623961aa95",
+      "previous_event_hash": "869bfca823b687473f498fa151e37f5e35e4deac7b7767ee67f5d47c62980c4c"
+    },
+    {
+      "id": "645c61dadec23d03b22821c9753b920972e28e02f2c3816efa6e38da85310caa",
+      "kind": "evidence",
+      "source": "approved-bureau"
+    }
+  ],
+  "edges": [
+    {
+      "source": "credit-v1",
+      "target": "policy-v1",
+      "relation": "uses"
+    },
+    {
+      "source": "policy-v1",
+      "target": "approval-v1",
+      "relation": "approved_by"
+    },
+    {
+      "source": "approval_with_controls",
+      "target": "policy-v1",
+      "relation": "governed_by"
+    },
+    {
+      "source": "approval_with_controls",
+      "target": "8a2f98db001966d79dfecab43f2a53ac2190661a98746787c1ae9d1d29f905b3",
+      "relation": "uses_evidence"
+    },
+    {
+      "source": "decline_close_to_approval",
+      "target": "policy-v1",
+      "relation": "governed_by"
+    },
+    {
+      "source": "decline_close_to_approval",
+      "target": "9411db5ba27e3f6a3bc5fe1c4e7119cf8021ef745c7bfa360f1e4fab65cac1d9",
+      "relation": "uses_evidence"
+    },
+    {
+      "source": "manual_review_not_behavioural",
+      "target": "policy-v1",
+      "relation": "governed_by"
+    },
+    {
+      "source": "manual_review_not_behavioural",
+      "target": "bbc3862aff6df8ace90e3202cf9b8e2034e779e82fad4897e1960bda9f66edaa",
+      "relation": "uses_evidence"
+    },
+    {
+      "source": "standard_approval",
+      "target": "policy-v1",
+      "relation": "governed_by"
+    },
+    {
+      "source": "standard_approval",
+      "target": "645c61dadec23d03b22821c9753b920972e28e02f2c3816efa6e38da85310caa",
+      "relation": "uses_evidence"
+    }
+  ],
+  "events": [
+    {
+      "case_id": "approval_with_controls",
+      "timestamp": "2026-11-02T00:22:13.291509+00:00",
+      "context_hash": "e9440b62960741ee182a337950df419295a6b6f020646c3c3ec544997f79a559",
+      "assessment_hash": "6f7027c035385399084b9fbc41f6583f282868cffb63d39bf99095e117722b74",
+      "previous_event_hash": null
+    },
+    {
+      "case_id": "decline_close_to_approval",
+      "timestamp": "2026-11-02T00:22:51.435600+00:00",
+      "context_hash": "6976e135a976eda8cb1dfa40fbda8e9f949ccaba5d1d6b1889bdcbb51319fab4",
+      "assessment_hash": "2c1938cbe3a64bec6a07a76d5e093baf97a8f6cdba2bf23bf86f8e67e19ca7f1",
+      "previous_event_hash": "38518a9ba7875f81de85c7f6b53728d71647f73fe8d26ed77e0d3b3a76ea7a4d"
+    },
+    {
+      "case_id": "manual_review_not_behavioural",
+      "timestamp": "2026-11-02T00:24:22.286857+00:00",
+      "context_hash": "63d162e63d6e571a6c77f8c2ae60ab2c16a71c8de5c3d7c05400e1f0903dbbe4",
+      "assessment_hash": "0653f41a19756e033dc831defc2e6f853de123b0fa663628de98e17aae29d192",
+      "previous_event_hash": "1dbe4f24c1a68dd7e422814f42006412ae08fc92b77c62be7a78a9df84fe5a4c"
+    },
+    {
+      "case_id": "standard_approval",
+      "timestamp": "2026-11-02T00:24:50.565493+00:00",
+      "context_hash": "b3db0d2793b047a8ab1547919fc60094aaf903064ec765fddfbe9cda3e3cd739",
+      "assessment_hash": "bbcdef75b8a534b95c727108b6946fa473b777b466e332b8e5c1df623961aa95",
+      "previous_event_hash": "869bfca823b687473f498fa151e37f5e35e4deac7b7767ee67f5d47c62980c4c"
+    }
+  ]
+}

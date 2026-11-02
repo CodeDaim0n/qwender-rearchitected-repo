@@ -1,0 +1,129 @@
+{
+  "selected_candidate": 5,
+  "selected_parameters": {
+    "max_depth": 4,
+    "learning_rate": 0.08,
+    "min_child_weight": 8,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "reg_lambda": 8,
+    "reg_alpha": 0.2
+  },
+  "selected_trees": 113,
+  "calibration_selection_rule": "isotonic only when its validation log loss is >= 0.002 lower than Platt and calibration has >= 500 defaults; otherwise Platt",
+  "calibration_selection_validation_metrics": {
+    "platt": {
+      "roc_auc": 0.7767036322841023,
+      "ks": 0.42015068208374257,
+      "pr_auc": 0.5291833676126122,
+      "log_loss": 0.4349945267335942,
+      "brier": 0.13744572787231943,
+      "calibration_intercept": -0.10512558832665636,
+      "calibration_slope": 0.9502530827496735
+    },
+    "isotonic": {
+      "roc_auc": 0.775488426440333,
+      "ks": 0.41662950988895975,
+      "pr_auc": 0.5124992620216448,
+      "log_loss": 0.4419165865541164,
+      "brier": 0.13779976559759588,
+      "calibration_intercept": -0.18197904048832564,
+      "calibration_slope": 0.8766299559859452
+    }
+  },
+  "calibration_method": "platt",
+  "test_class_counts": {
+    "rows": 4500,
+    "defaults": 995,
+    "non_defaults": 3505
+  },
+  "test_metrics": {
+    "uncalibrated": {
+      "roc_auc": 0.777888730385164,
+      "ks": 0.43657087147578116,
+      "pr_auc": 0.5456351330506021,
+      "log_loss": 0.43253411935618313,
+      "brier": 0.1358427418424606,
+      "calibration_intercept": -0.03180182777954982,
+      "calibration_slope": 0.9651971089845942
+    },
+    "calibrated": {
+      "roc_auc": 0.777888730385164,
+      "ks": 0.43657087147578116,
+      "pr_auc": 0.5456351330506021,
+      "log_loss": 0.432665376786473,
+      "brier": 0.13588244385971915,
+      "calibration_intercept": -0.07959378429561628,
+      "calibration_slope": 0.9567158214509892
+    }
+  },
+  "bootstrap": {
+    "unit": "client row",
+    "method": "IID percentile bootstrap",
+    "replicates": 1000,
+    "seed": 20261130,
+    "intervals": {
+      "uncalibrated": {
+        "roc_auc": {
+          "lower_95": 0.7615481635869795,
+          "upper_95": 0.7947332726647222
+        },
+        "ks": {
+          "lower_95": 0.4078551517373264,
+          "upper_95": 0.4694387564124768
+        },
+        "pr_auc": {
+          "lower_95": 0.5124203285312643,
+          "upper_95": 0.5776116745214275
+        },
+        "log_loss": {
+          "lower_95": 0.4145659926164211,
+          "upper_95": 0.44941615939802565
+        },
+        "brier": {
+          "lower_95": 0.12894405506061962,
+          "upper_95": 0.1424668955415915
+        },
+        "calibration_intercept": {
+          "lower_95": -0.1460696198853832,
+          "upper_95": 0.0793218067482498
+        },
+        "calibration_slope": {
+          "lower_95": 0.8993560977709779,
+          "upper_95": 1.0382279132427268
+        }
+      },
+      "calibrated": {
+        "roc_auc": {
+          "lower_95": 0.7615481635869795,
+          "upper_95": 0.7947332726647222
+        },
+        "ks": {
+          "lower_95": 0.4078551517373264,
+          "upper_95": 0.4694387564124768
+        },
+        "pr_auc": {
+          "lower_95": 0.5124203285312643,
+          "upper_95": 0.5776116745214275
+        },
+        "log_loss": {
+          "lower_95": 0.4149471717597839,
+          "upper_95": 0.4496183424640182
+        },
+        "brier": {
+          "lower_95": 0.12897945159504148,
+          "upper_95": 0.14248261520032968
+        },
+        "calibration_intercept": {
+          "lower_95": -0.19077390586960155,
+          "upper_95": 0.0304427115734749
+        },
+        "calibration_slope": {
+          "lower_95": 0.8914533599654983,
+          "upper_95": 1.0291048989552625
+        }
+      }
+    }
+  },
+  "test_usage": "test labels loaded once after hyperparameters, tree count and calibration method were frozen; no test tuning"
+}

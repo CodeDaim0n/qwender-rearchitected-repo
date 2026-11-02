@@ -1,0 +1,292 @@
+{
+  "case": "invalid_input_missing_field",
+  "request": {
+    "action": "ASSESS",
+    "credit": {
+      "LIMIT_BAL": 10000,
+      "SEX": null,
+      "EDUCATION": 3,
+      "MARRIAGE": 2,
+      "AGE": 50,
+      "PAY_0": 3,
+      "PAY_2": 2,
+      "PAY_3": 2,
+      "PAY_4": 2,
+      "PAY_5": 2,
+      "PAY_6": 2,
+      "BILL_AMT1": 600,
+      "BILL_AMT2": 600,
+      "BILL_AMT3": 600,
+      "BILL_AMT4": 600,
+      "BILL_AMT5": 600,
+      "BILL_AMT6": 2050,
+      "PAY_AMT1": 0,
+      "PAY_AMT2": 0,
+      "PAY_AMT3": 0,
+      "PAY_AMT4": 0,
+      "PAY_AMT5": 1450,
+      "PAY_AMT6": 0
+    }
+  },
+  "arms": {
+    "bundled": {
+      "assessment": {
+        "protocol": "compiled-credit-llm/assessment-v1",
+        "status": "OK",
+        "decision": {
+          "outcome_code": "II",
+          "outcome": "invalid input",
+          "level": "hard",
+          "controlling_rules": [
+            "a required input is missing"
+          ],
+          "note": "first active level in priority order hard > review > soft > approve"
+        },
+        "model": {
+          "probability": "0.843337848555",
+          "probability_pct": "84.3%",
+          "risk_band": "high",
+          "raw_margin": 1.683276
+        },
+        "policy": {
+          "id": "UCI_DEMO_POLICY_v1",
+          "priority": [
+            "hard",
+            "review",
+            "soft",
+            "approve"
+          ],
+          "active": {
+            "hard": [
+              "a required input is missing",
+              "severe delinquency"
+            ],
+            "review": [
+              "an unknown category requires review",
+              "a feature is outside the development range",
+              "the model risk band requires review"
+            ],
+            "soft": [
+              "repeated delinquency"
+            ]
+          }
+        },
+        "drivers": {
+          "increasing_risk": [
+            {
+              "feature": "Most recent repayment status",
+              "code": "PAY_0",
+              "contribution": 1.251132
+            },
+            {
+              "feature": "Repayment status two months ago",
+              "code": "PAY_2",
+              "contribution": 0.218429
+            }
+          ],
+          "decreasing_risk": [
+            {
+              "feature": "Statement balance three months ago",
+              "code": "BILL_AMT3",
+              "contribution": -0.052299
+            },
+            {
+              "feature": "Recorded marital-status category",
+              "code": "MARRIAGE",
+              "contribution": -0.045192
+            }
+          ]
+        },
+        "calculations": {
+          "current_utilization_pct": 6.0,
+          "max_utilization_pct": 20.5,
+          "avg_utilization_pct": 8.41,
+          "delinquent_statuses": 6,
+          "repeated_delinquency": true,
+          "max_severity": 3,
+          "payment_coverage_pct": 28.71,
+          "balance_trend_pct": -14.5,
+          "bill_dispersion": 402,
+          "payment_dispersion": 402,
+          "zero_payment_stress": false,
+          "positive_bill_total": 5050,
+          "payment_total": 1450
+        },
+        "data_quality": [
+          "a required input is missing",
+          "a feature is outside the development range",
+          "a demographic category is unknown"
+        ],
+        "recourse": {
+          "current_outcome": "invalid input",
+          "current_outcome_code": "II",
+          "scope": "behavioural fields only: repayment statuses, statement balances, payments",
+          "non_behavioural_blockers": [
+            "required field missing: recorded sex category",
+            "a demographic category is unknown; this cannot be changed by borrower behaviour and routes to human review",
+            "a value is outside the development range; this routes to human review regardless of behaviour"
+          ],
+          "status": "NOT_REACHABLE_BY_BEHAVIOUR"
+        },
+        "explanation": null,
+        "explanation_status": "WITHHELD_BY_VERIFIER",
+        "explanation_violations": [
+          "formatting: no quotation marks, currency signs or brackets",
+          "length: 239 words"
+        ],
+        "boundary": "Synthetic demonstration policy UCI_DEMO_POLICY_v1 on the historical 2005 UCI benchmark; model probability is a benchmark output, not a validated real-world probability of default; contributions are associations, not causes; not a lending, regulatory or adverse-action decision.",
+        "receipt": "RECEIPT1|p=UDP1|s=1683276062|q=0.843337848555|o=II|b=H|f=MI,OD,UC|t=IM,DS,RU,RO,RH,CD|c=cu:600,mu:2050,au:841,dc:6,rd:1,ms:3,pc:2871,bt:-1450,bd:402,pd:402,zs:0,pb:5050,pt:1450|xp=PAY_0:1251132147,PAY_2:218428689|xn=BILL_AMT3:-52299113,MARRIAGE:-45192347|r=IM|d=SYNTHETIC_NONREGULATORY_ASSOCIATIVE_NOT_CAUSAL"
+      },
+      "evidence": "EVIDENCE1|p=UDP1|s=1683276062|q=0.843337848555|o=II|b=H|f=MI,OD,UC|t=IM,DS,RU,RO,RH,CD|c=cu:600,mu:2050,au:841,dc:6,rd:1,ms:3,pc:2871,bt:-1450,bd:402,pd:402,zs:0,pb:5050,pt:1450|xp=PAY_0:1251132147,PAY_2:218428689|xn=BILL_AMT3:-52299113,MARRIAGE:-45192347|r=IM",
+      "prompt": "ASSESSMENT_ROUTE|valid=1|validator=CHECKPOINT|verifier=CHECKPOINT\nEVIDENCE1|p=UDP1|s=1683276062|q=0.843337848555|o=II|b=H|f=MI,OD,UC|t=IM,DS,RU,RO,RH,CD|c=cu:600,mu:2050,au:841,dc:6,rd:1,ms:3,pc:2871,bt:-1450,bd:402,pd:402,zs:0,pb:5050,pt:1450|xp=PAY_0:1251132147,PAY_2:218428689|xn=BILL_AMT3:-52299113,MARRIAGE:-45192347|r=IM\nFACTS={\"decision\":{\"outcome_code\":\"II\",\"outcome\":\"invalid input\",\"level\":\"hard\",\"controlling_rules\":[\"a required input is missing\"],\"note\":\"first active level in priority order hard > review > soft > approve\"},\"model\":{\"probability\":\"0.843337848555\",\"probability_pct\":\"84.3%\",\"risk_band\":\"high\"},\"policy\":{\"id\":\"UCI_DEMO_POLICY_v1\",\"priority\":[\"hard\",\"review\",\"soft\",\"approve\"],\"active\":{\"hard\":[\"a required input is missing\",\"severe delinquency\"],\"review\":[\"an unknown category requires review\",\"a feature is outside the development range\",\"the model risk band requires review\"],\"soft\":[\"repeated delinquency\"]}},\"drivers\":{\"increasing_risk\":[\"Most recent repayment status\",\"Repayment status two months ago\"],\"decreasing_risk\":[\"Statement balance three months ago\",\"Recorded marital-status category\"]},\"calculations\":{\"current_utilization_pct\":6.0,\"max_utilization_pct\":20.5,\"avg_utilization_pct\":8.41,\"delinquent_statuses\":6,\"repeated_delinquency\":true,\"max_severity\":3,\"payment_coverage_pct\":28.71,\"balance_trend_pct\":-14.5,\"bill_dispersion\":402,\"payment_dispersion\":402,\"zero_payment_stress\":false,\"positive_bill_total\":5050,\"payment_total\":1450},\"data_quality\":[\"a required input is missing\",\"a feature is outside the development range\",\"a demographic category is unknown\"],\"proximity\":{\"status\":\"not reachable by behaviour\",\"blockers\":[\"required field missing: recorded sex category\",\"a demographic category is unknown; this cannot be changed by borrower behaviour and routes to human review\",\"a value is outside the development range; this routes to human review regardless of behaviour\"]}}\nWrite one paragraph (4 to 7 sentences, 70 to 160 words) for a credit analyst: state the decision and the rule or rules that control it, give the model probability and band, name the main risk-increasing and risk-decreasing drivers, cite the calculations that matter for the active rules, mention any data-quality flag, say how close the case is to the next better outcome and what would change it (or that behaviour cannot change it), and close by noting the probability is a benchmark association, not a cause and not a guarantee. No quotation marks, no feature codes, no numbers other than those given.",
+      "seconds": 26.61569185299959,
+      "generation_invoked": true,
+      "generation": {
+        "prompt_sha256": "09bf4ae89f7e158c1f54c220b3807975fd95f1fb5a2cb706bbe46363e204b9c0",
+        "response": "The credit analyst determines that the case is invalid due to missing required input fields, specifically the recorded sex category and the demographic category, which are absent from the provided evidence. This decision is controlled by the hard-level rule \"a required input is missing\" which takes precedence over the soft-level rule \"repeated delinquency\" and the review-level rule \"an unknown category requires review.\" The model assigns a probability of 84.3% to the outcome of invalid input, placing the case within a high risk band. The primary risk-increasing drivers identified are the most recent repayment status and the repayment status two months ago, while risk-decreasing factors include the statement balance three months ago and the recorded marital-status category. The active rules for the hard level are \"a required input is missing\" and \"severe delinquency,\" both of which are triggered by the missing data. The calculations show a current utilization of 6.0%, a max utilization of 20.5%, and an average utilization of 8.41%, with a payment coverage of 28.71%. The data quality check flags multiple issues including a missing required field, an unknown demographic category, and a value outside the development range. The case is not close to a better outcome because the missing data prevents the model from evaluating the repayment status or marital status, meaning the behavior cannot change the outcome. The probability of 84.3% serves as a benchmark association rather than a cause or guarantee for the final decision.",
+        "seconds": 26.556615202000103,
+        "new_tokens": 310
+      }
+    },
+    "separated": {
+      "assessment": {
+        "protocol": "compiled-credit-llm/assessment-v1",
+        "status": "OK",
+        "decision": {
+          "outcome_code": "II",
+          "outcome": "invalid input",
+          "level": "hard",
+          "controlling_rules": [
+            "a required input is missing"
+          ],
+          "note": "first active level in priority order hard > review > soft > approve"
+        },
+        "model": {
+          "probability": "0.843337848555",
+          "probability_pct": "84.3%",
+          "risk_band": "high",
+          "raw_margin": 1.683276
+        },
+        "policy": {
+          "id": "UCI_DEMO_POLICY_v1",
+          "priority": [
+            "hard",
+            "review",
+            "soft",
+            "approve"
+          ],
+          "active": {
+            "hard": [
+              "a required input is missing",
+              "severe delinquency"
+            ],
+            "review": [
+              "an unknown category requires review",
+              "a feature is outside the development range",
+              "the model risk band requires review"
+            ],
+            "soft": [
+              "repeated delinquency"
+            ]
+          }
+        },
+        "drivers": {
+          "increasing_risk": [
+            {
+              "feature": "Most recent repayment status",
+              "code": "PAY_0",
+              "contribution": 1.251132
+            },
+            {
+              "feature": "Repayment status two months ago",
+              "code": "PAY_2",
+              "contribution": 0.218429
+            }
+          ],
+          "decreasing_risk": [
+            {
+              "feature": "Statement balance three months ago",
+              "code": "BILL_AMT3",
+              "contribution": -0.052299
+            },
+            {
+              "feature": "Recorded marital-status category",
+              "code": "MARRIAGE",
+              "contribution": -0.045192
+            }
+          ]
+        },
+        "calculations": {
+          "current_utilization_pct": 6.0,
+          "max_utilization_pct": 20.5,
+          "avg_utilization_pct": 8.41,
+          "delinquent_statuses": 6,
+          "repeated_delinquency": true,
+          "max_severity": 3,
+          "payment_coverage_pct": 28.71,
+          "balance_trend_pct": -14.5,
+          "bill_dispersion": 402,
+          "payment_dispersion": 402,
+          "zero_payment_stress": false,
+          "positive_bill_total": 5050,
+          "payment_total": 1450
+        },
+        "data_quality": [
+          "a required input is missing",
+          "a feature is outside the development range",
+          "a demographic category is unknown"
+        ],
+        "recourse": {
+          "current_outcome": "invalid input",
+          "current_outcome_code": "II",
+          "scope": "behavioural fields only: repayment statuses, statement balances, payments",
+          "non_behavioural_blockers": [
+            "required field missing: recorded sex category",
+            "a demographic category is unknown; this cannot be changed by borrower behaviour and routes to human review",
+            "a value is outside the development range; this routes to human review regardless of behaviour"
+          ],
+          "status": "NOT_REACHABLE_BY_BEHAVIOUR"
+        },
+        "explanation": null,
+        "explanation_status": "WITHHELD_BY_VERIFIER",
+        "explanation_violations": [
+          "formatting: no quotation marks, currency signs or brackets",
+          "length: 239 words"
+        ],
+        "boundary": "Synthetic demonstration policy UCI_DEMO_POLICY_v1 on the historical 2005 UCI benchmark; model probability is a benchmark output, not a validated real-world probability of default; contributions are associations, not causes; not a lending, regulatory or adverse-action decision.",
+        "receipt": "RECEIPT1|p=UDP1|s=1683276062|q=0.843337848555|o=II|b=H|f=MI,OD,UC|t=IM,DS,RU,RO,RH,CD|c=cu:600,mu:2050,au:841,dc:6,rd:1,ms:3,pc:2871,bt:-1450,bd:402,pd:402,zs:0,pb:5050,pt:1450|xp=PAY_0:1251132147,PAY_2:218428689|xn=BILL_AMT3:-52299113,MARRIAGE:-45192347|r=IM|d=SYNTHETIC_NONREGULATORY_ASSOCIATIVE_NOT_CAUSAL"
+      },
+      "evidence": "EVIDENCE1|p=UDP1|s=1683276062|q=0.843337848555|o=II|b=H|f=MI,OD,UC|t=IM,DS,RU,RO,RH,CD|c=cu:600,mu:2050,au:841,dc:6,rd:1,ms:3,pc:2871,bt:-1450,bd:402,pd:402,zs:0,pb:5050,pt:1450|xp=PAY_0:1251132147,PAY_2:218428689|xn=BILL_AMT3:-52299113,MARRIAGE:-45192347|r=IM",
+      "prompt": "ASSESSMENT_ROUTE|valid=1|validator=CHECKPOINT|verifier=CHECKPOINT\nEVIDENCE1|p=UDP1|s=1683276062|q=0.843337848555|o=II|b=H|f=MI,OD,UC|t=IM,DS,RU,RO,RH,CD|c=cu:600,mu:2050,au:841,dc:6,rd:1,ms:3,pc:2871,bt:-1450,bd:402,pd:402,zs:0,pb:5050,pt:1450|xp=PAY_0:1251132147,PAY_2:218428689|xn=BILL_AMT3:-52299113,MARRIAGE:-45192347|r=IM\nFACTS={\"decision\":{\"outcome_code\":\"II\",\"outcome\":\"invalid input\",\"level\":\"hard\",\"controlling_rules\":[\"a required input is missing\"],\"note\":\"first active level in priority order hard > review > soft > approve\"},\"model\":{\"probability\":\"0.843337848555\",\"probability_pct\":\"84.3%\",\"risk_band\":\"high\"},\"policy\":{\"id\":\"UCI_DEMO_POLICY_v1\",\"priority\":[\"hard\",\"review\",\"soft\",\"approve\"],\"active\":{\"hard\":[\"a required input is missing\",\"severe delinquency\"],\"review\":[\"an unknown category requires review\",\"a feature is outside the development range\",\"the model risk band requires review\"],\"soft\":[\"repeated delinquency\"]}},\"drivers\":{\"increasing_risk\":[\"Most recent repayment status\",\"Repayment status two months ago\"],\"decreasing_risk\":[\"Statement balance three months ago\",\"Recorded marital-status category\"]},\"calculations\":{\"current_utilization_pct\":6.0,\"max_utilization_pct\":20.5,\"avg_utilization_pct\":8.41,\"delinquent_statuses\":6,\"repeated_delinquency\":true,\"max_severity\":3,\"payment_coverage_pct\":28.71,\"balance_trend_pct\":-14.5,\"bill_dispersion\":402,\"payment_dispersion\":402,\"zero_payment_stress\":false,\"positive_bill_total\":5050,\"payment_total\":1450},\"data_quality\":[\"a required input is missing\",\"a feature is outside the development range\",\"a demographic category is unknown\"],\"proximity\":{\"status\":\"not reachable by behaviour\",\"blockers\":[\"required field missing: recorded sex category\",\"a demographic category is unknown; this cannot be changed by borrower behaviour and routes to human review\",\"a value is outside the development range; this routes to human review regardless of behaviour\"]}}\nWrite one paragraph (4 to 7 sentences, 70 to 160 words) for a credit analyst: state the decision and the rule or rules that control it, give the model probability and band, name the main risk-increasing and risk-decreasing drivers, cite the calculations that matter for the active rules, mention any data-quality flag, say how close the case is to the next better outcome and what would change it (or that behaviour cannot change it), and close by noting the probability is a benchmark association, not a cause and not a guarantee. No quotation marks, no feature codes, no numbers other than those given.",
+      "seconds": 25.772392075001335,
+      "generation_invoked": true,
+      "generation": {
+        "prompt_sha256": "09bf4ae89f7e158c1f54c220b3807975fd95f1fb5a2cb706bbe46363e204b9c0",
+        "response": "The credit analyst determines that the case is invalid due to missing required input fields, specifically the recorded sex category and the demographic category, which are absent from the provided evidence. This decision is controlled by the hard-level rule \"a required input is missing\" which takes precedence over the soft-level rule \"repeated delinquency\" and the review-level rule \"an unknown category requires review.\" The model assigns a probability of 84.3% to the outcome of invalid input, placing the case within a high risk band. The primary risk-increasing drivers identified are the most recent repayment status and the repayment status two months ago, while risk-decreasing factors include the statement balance three months ago and the recorded marital-status category. The active rules for the hard level are \"a required input is missing\" and \"severe delinquency,\" both of which are triggered by the missing data. The calculations show a current utilization of 6.0%, a max utilization of 20.5%, and an average utilization of 8.41%, with a payment coverage of 28.71%. The data quality check flags multiple issues including a missing required field, an unknown demographic category, and a value outside the development range. The case is not close to a better outcome because the missing data prevents the model from evaluating the repayment status or marital status, meaning the behavior cannot change the outcome. The probability of 84.3% serves as a benchmark association rather than a cause or guarantee for the final decision.",
+        "seconds": 25.6719181389999,
+        "new_tokens": 310
+      },
+      "trusted_context": {
+        "request_hash": "2b256edf8d9d03c97f14638761f98d357f1108b78a544a9ba511ae20cf0af1cd",
+        "context": {
+          "policy": "policy-v1",
+          "source": "approved-bureau",
+          "evidence_age_hours": 1,
+          "tenant": "tenant-a",
+          "evidence_tenant": "tenant-a",
+          "principal": "credit-officer"
+        },
+        "components": {
+          "scorer": "d8ae5b499126871a90a4b4f9fff88dc366ed9c813aadeace87e91054ea9b09fb",
+          "policy": "a0b354b41b16f21c1fbb02f63aeae22037f2236589e3ba0cdd3e7d6a10e16529",
+          "rego": "596412ad483253cbe50deddd2b2dc59e8b0fd255dd7da269f392eb0edf7c4e8f"
+        },
+        "registry_version": 1,
+        "context_hash": "9cd67c17b34ef56e30b010b3d27c6ea710d4879700fe4aeb923f8f156756bf01"
+      }
+    }
+  },
+  "evidence_identical": true,
+  "prompt_identical": true,
+  "assessment_identical": true
+}

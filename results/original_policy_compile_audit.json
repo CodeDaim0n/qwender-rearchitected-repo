@@ -1,0 +1,187 @@
+{
+  "policy_distribution": {
+    "calibration": {
+      "flags": {
+        "hard_contract_invalid": 0,
+        "missing_input": 0,
+        "nonfinite_or_type_invalid": 0,
+        "out_of_development_range": 0,
+        "undocumented_repayment_code": 2585,
+        "unknown_demographic_category": 42
+      },
+      "outcomes": {
+        "APPROVE_STANDARD": 1115,
+        "APPROVE_WITH_CONTROLS": 681,
+        "DEMO_DECLINE": 287,
+        "INVALID_INPUT": 0,
+        "MANUAL_REVIEW": 917
+      },
+      "risk_bands": {
+        "ELEVATED": 244,
+        "HIGH": 115,
+        "LOW": 2313,
+        "MODERATE": 328
+      },
+      "rows": 3000,
+      "triggers": {
+        "APPROVE_STANDARD_NO_ADVERSE_TRIGGER": 1115,
+        "CONTROL_ELEVATED_MODEL_RISK": 244,
+        "CONTROL_HIGH_UTILIZATION": 779,
+        "CONTROL_LOW_PAYMENT_COVERAGE": 1472,
+        "CONTROL_REPEATED_DELINQUENCY": 825,
+        "CONTROL_RISING_BILL_TREND": 525,
+        "DECLINE_EXTREME_UTILIZATION_WITH_DELINQUENCY": 12,
+        "DECLINE_SEVERE_DELINQUENCY": 274,
+        "DECLINE_ZERO_PAYMENT_HIGH_UTILIZATION": 5,
+        "INVALID_CONTRACT": 0,
+        "INVALID_MISSING": 0,
+        "REVIEW_HIGH_MODEL_RISK": 115,
+        "REVIEW_MULTIPLE_SOFT_TRIGGERS": 1152,
+        "REVIEW_OUT_OF_DEVELOPMENT_RANGE": 0,
+        "REVIEW_UNKNOWN_CATEGORY": 42
+      }
+    },
+    "test": {
+      "flags": {
+        "hard_contract_invalid": 0,
+        "missing_input": 0,
+        "nonfinite_or_type_invalid": 0,
+        "out_of_development_range": 2,
+        "undocumented_repayment_code": 3909,
+        "unknown_demographic_category": 62
+      },
+      "outcomes": {
+        "APPROVE_STANDARD": 1630,
+        "APPROVE_WITH_CONTROLS": 1011,
+        "DEMO_DECLINE": 440,
+        "INVALID_INPUT": 0,
+        "MANUAL_REVIEW": 1419
+      },
+      "risk_bands": {
+        "ELEVATED": 384,
+        "HIGH": 164,
+        "LOW": 3426,
+        "MODERATE": 526
+      },
+      "rows": 4500,
+      "triggers": {
+        "APPROVE_STANDARD_NO_ADVERSE_TRIGGER": 1630,
+        "CONTROL_ELEVATED_MODEL_RISK": 384,
+        "CONTROL_HIGH_UTILIZATION": 1257,
+        "CONTROL_LOW_PAYMENT_COVERAGE": 2200,
+        "CONTROL_REPEATED_DELINQUENCY": 1245,
+        "CONTROL_RISING_BILL_TREND": 860,
+        "DECLINE_EXTREME_UTILIZATION_WITH_DELINQUENCY": 12,
+        "DECLINE_SEVERE_DELINQUENCY": 430,
+        "DECLINE_ZERO_PAYMENT_HIGH_UTILIZATION": 8,
+        "INVALID_CONTRACT": 0,
+        "INVALID_MISSING": 0,
+        "REVIEW_HIGH_MODEL_RISK": 164,
+        "REVIEW_MULTIPLE_SOFT_TRIGGERS": 1762,
+        "REVIEW_OUT_OF_DEVELOPMENT_RANGE": 2,
+        "REVIEW_UNKNOWN_CATEGORY": 62
+      }
+    },
+    "train": {
+      "flags": {
+        "hard_contract_invalid": 0,
+        "missing_input": 0,
+        "nonfinite_or_type_invalid": 0,
+        "out_of_development_range": 0,
+        "undocumented_repayment_code": 15549,
+        "unknown_demographic_category": 250
+      },
+      "outcomes": {
+        "APPROVE_STANDARD": 6623,
+        "APPROVE_WITH_CONTROLS": 3974,
+        "DEMO_DECLINE": 1836,
+        "INVALID_INPUT": 0,
+        "MANUAL_REVIEW": 5567
+      },
+      "risk_bands": {
+        "ELEVATED": 1452,
+        "HIGH": 738,
+        "LOW": 13675,
+        "MODERATE": 2135
+      },
+      "rows": 18000,
+      "triggers": {
+        "APPROVE_STANDARD_NO_ADVERSE_TRIGGER": 6623,
+        "CONTROL_ELEVATED_MODEL_RISK": 1452,
+        "CONTROL_HIGH_UTILIZATION": 4780,
+        "CONTROL_LOW_PAYMENT_COVERAGE": 8795,
+        "CONTROL_REPEATED_DELINQUENCY": 5037,
+        "CONTROL_RISING_BILL_TREND": 3332,
+        "DECLINE_EXTREME_UTILIZATION_WITH_DELINQUENCY": 66,
+        "DECLINE_SEVERE_DELINQUENCY": 1772,
+        "DECLINE_ZERO_PAYMENT_HIGH_UTILIZATION": 27,
+        "INVALID_CONTRACT": 0,
+        "INVALID_MISSING": 0,
+        "REVIEW_HIGH_MODEL_RISK": 738,
+        "REVIEW_MULTIPLE_SOFT_TRIGGERS": 7054,
+        "REVIEW_OUT_OF_DEVELOPMENT_RANGE": 0,
+        "REVIEW_UNKNOWN_CATEGORY": 250
+      }
+    },
+    "validation": {
+      "flags": {
+        "hard_contract_invalid": 0,
+        "missing_input": 0,
+        "nonfinite_or_type_invalid": 0,
+        "out_of_development_range": 0,
+        "undocumented_repayment_code": 3896,
+        "unknown_demographic_category": 45
+      },
+      "outcomes": {
+        "APPROVE_STANDARD": 1594,
+        "APPROVE_WITH_CONTROLS": 1013,
+        "DEMO_DECLINE": 465,
+        "INVALID_INPUT": 0,
+        "MANUAL_REVIEW": 1428
+      },
+      "risk_bands": {
+        "ELEVATED": 343,
+        "HIGH": 190,
+        "LOW": 3402,
+        "MODERATE": 565
+      },
+      "rows": 4500,
+      "triggers": {
+        "APPROVE_STANDARD_NO_ADVERSE_TRIGGER": 1594,
+        "CONTROL_ELEVATED_MODEL_RISK": 343,
+        "CONTROL_HIGH_UTILIZATION": 1215,
+        "CONTROL_LOW_PAYMENT_COVERAGE": 2267,
+        "CONTROL_REPEATED_DELINQUENCY": 1296,
+        "CONTROL_RISING_BILL_TREND": 844,
+        "DECLINE_EXTREME_UTILIZATION_WITH_DELINQUENCY": 15,
+        "DECLINE_SEVERE_DELINQUENCY": 454,
+        "DECLINE_ZERO_PAYMENT_HIGH_UTILIZATION": 4,
+        "INVALID_CONTRACT": 0,
+        "INVALID_MISSING": 0,
+        "REVIEW_HIGH_MODEL_RISK": 190,
+        "REVIEW_MULTIPLE_SOFT_TRIGGERS": 1819,
+        "REVIEW_OUT_OF_DEVELOPMENT_RANGE": 0,
+        "REVIEW_UNKNOWN_CATEGORY": 45
+      }
+    }
+  },
+  "probability": {
+    "declared_margin_bounds_fixed": [
+      -7708532020,
+      7708532020
+    ],
+    "frozen_platt_native_margin_max_error": 2.0891274826739803e-07,
+    "maximum": 0.884631374681422,
+    "minimum": 0.014791056434205875,
+    "native_xgboost_probability_max_error": 2.1260380150822655e-07
+  },
+  "rows": 30000,
+  "runtime_seconds": 15.275025416000062,
+  "test_ranking": {
+    "margin_auc": 0.777888730385164,
+    "margin_ks": 0.43657087147578116,
+    "probability_auc": 0.777888730385164,
+    "probability_ks": 0.43657087147578116
+  },
+  "threshold_tuning_test_labels_used": false
+}

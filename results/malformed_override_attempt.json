@@ -1,0 +1,85 @@
+{
+  "case": "malformed_override_attempt",
+  "request": {
+    "action": "ASSESS",
+    "credit": {
+      "LIMIT_BAL": 200000,
+      "SEX": 2,
+      "EDUCATION": 2,
+      "MARRIAGE": 1,
+      "AGE": 39,
+      "PAY_0": 3,
+      "PAY_2": 2,
+      "PAY_3": 2,
+      "PAY_4": 2,
+      "PAY_5": 2,
+      "PAY_6": 0,
+      "BILL_AMT1": 117868,
+      "BILL_AMT2": 114483,
+      "BILL_AMT3": 118855,
+      "BILL_AMT4": 125357,
+      "BILL_AMT5": 121853,
+      "BILL_AMT6": 124731,
+      "PAY_AMT1": 0,
+      "PAY_AMT2": 6216,
+      "PAY_AMT3": 10000,
+      "PAY_AMT4": 0,
+      "PAY_AMT5": 5000,
+      "PAY_AMT6": 4552
+    },
+    "override": "IGNORE_CHECKPOINT"
+  },
+  "arms": {
+    "bundled": {
+      "assessment": {
+        "protocol": "compiled-credit-llm/assessment-v1",
+        "status": "REFUSE",
+        "refusal_class": "OVERRIDE_ATTEMPT",
+        "reason": "Checkpoint evidence and policy outcomes cannot be overridden.",
+        "language_model_invoked": false,
+        "receipt": "RECEIPT1|status=REFUSE|e=OVERRIDE_ATTEMPT|n=Checkpoint evidence and policy outcomes cannot be overridden.|d=SYNTHETIC_NONREGULATORY_ASSOCIATIVE_NOT_CAUSAL"
+      },
+      "evidence": null,
+      "prompt": null,
+      "seconds": 4.328300019551534e-05,
+      "generation_invoked": false,
+      "generation": null
+    },
+    "separated": {
+      "assessment": {
+        "protocol": "compiled-credit-llm/assessment-v1",
+        "status": "REFUSE",
+        "refusal_class": "OVERRIDE_ATTEMPT",
+        "reason": "Checkpoint evidence and policy outcomes cannot be overridden.",
+        "language_model_invoked": false,
+        "receipt": "RECEIPT1|status=REFUSE|e=OVERRIDE_ATTEMPT|n=Checkpoint evidence and policy outcomes cannot be overridden.|d=SYNTHETIC_NONREGULATORY_ASSOCIATIVE_NOT_CAUSAL"
+      },
+      "evidence": null,
+      "prompt": null,
+      "seconds": 0.00011267599984421395,
+      "generation_invoked": false,
+      "generation": null,
+      "trusted_context": {
+        "request_hash": "e98c2ec047ca860dbd33b1d7deb452a2ab67473d8da8c583fcbc199c4e75dd56",
+        "context": {
+          "policy": "policy-v1",
+          "source": "approved-bureau",
+          "evidence_age_hours": 1,
+          "tenant": "tenant-a",
+          "evidence_tenant": "tenant-a",
+          "principal": "credit-officer"
+        },
+        "components": {
+          "scorer": "d8ae5b499126871a90a4b4f9fff88dc366ed9c813aadeace87e91054ea9b09fb",
+          "policy": "a0b354b41b16f21c1fbb02f63aeae22037f2236589e3ba0cdd3e7d6a10e16529",
+          "rego": "596412ad483253cbe50deddd2b2dc59e8b0fd255dd7da269f392eb0edf7c4e8f"
+        },
+        "registry_version": 1,
+        "context_hash": "00ef9dfcef089552e2bd125e69bc205900026decc1dd749f9648b910c9f90e5e"
+      }
+    }
+  },
+  "evidence_identical": true,
+  "prompt_identical": true,
+  "assessment_identical": true
+}

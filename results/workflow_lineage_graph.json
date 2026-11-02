@@ -1,0 +1,61 @@
+{
+  "nodes": [
+    {
+      "id": "credit-v1",
+      "kind": "release"
+    },
+    {
+      "id": "policy-v1",
+      "kind": "policy"
+    },
+    {
+      "id": "approval-v1",
+      "kind": "approval"
+    },
+    {
+      "id": "synthetic-case-001",
+      "kind": "assessment",
+      "case_id": "synthetic-case-001",
+      "timestamp": "2026-11-02T00:28:15.141138+00:00",
+      "context_hash": "53189a6d4989680718a9cd43281c89cc209cb49fdfdee5c5b23c8ea64686e77c",
+      "assessment_hash": "6f7027c035385399084b9fbc41f6583f282868cffb63d39bf99095e117722b74",
+      "previous_event_hash": null
+    },
+    {
+      "id": "8a2f98db001966d79dfecab43f2a53ac2190661a98746787c1ae9d1d29f905b3",
+      "kind": "evidence",
+      "source": "approved-bureau"
+    }
+  ],
+  "edges": [
+    {
+      "source": "credit-v1",
+      "target": "policy-v1",
+      "relation": "uses"
+    },
+    {
+      "source": "policy-v1",
+      "target": "approval-v1",
+      "relation": "approved_by"
+    },
+    {
+      "source": "synthetic-case-001",
+      "target": "policy-v1",
+      "relation": "governed_by"
+    },
+    {
+      "source": "synthetic-case-001",
+      "target": "8a2f98db001966d79dfecab43f2a53ac2190661a98746787c1ae9d1d29f905b3",
+      "relation": "uses_evidence"
+    }
+  ],
+  "events": [
+    {
+      "case_id": "synthetic-case-001",
+      "timestamp": "2026-11-02T00:28:15.141138+00:00",
+      "context_hash": "53189a6d4989680718a9cd43281c89cc209cb49fdfdee5c5b23c8ea64686e77c",
+      "assessment_hash": "6f7027c035385399084b9fbc41f6583f282868cffb63d39bf99095e117722b74",
+      "previous_event_hash": null
+    }
+  ]
+}

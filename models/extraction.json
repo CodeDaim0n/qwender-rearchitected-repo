@@ -1,0 +1,7 @@
+{
+  "source_checkpoint": "upstream/artifacts/checkpoints/CompiledCreditLLM-0.8B-UCI-base",
+  "source_compiled_sha256": "5cbc610ab07920225486b866cd751326132939f898df2802fefe24593a4dd5f9",
+  "scorer_attribution_file_sha256": "d8ae5b499126871a90a4b4f9fff88dc366ed9c813aadeace87e91054ea9b09fb",
+  "qwen_weights_changed": false,
+  "policy_execution": "external OPA 1.22.0"
+}

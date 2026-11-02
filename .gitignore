@@ -1,0 +1,9 @@
+__pycache__/
+.pytest_cache/
+.venv/
+vendor/
+bin/opa
+models/*.safetensors
+*.tar
+*.tar.gz
+*.sqlite

@@ -1,0 +1,251 @@
+{
+  "case": "standard_approval",
+  "request": {
+    "action": "ASSESS",
+    "credit": {
+      "LIMIT_BAL": 360000,
+      "SEX": 2,
+      "EDUCATION": 1,
+      "MARRIAGE": 1,
+      "AGE": 35,
+      "PAY_0": -2,
+      "PAY_2": -2,
+      "PAY_3": -2,
+      "PAY_4": -2,
+      "PAY_5": -2,
+      "PAY_6": -2,
+      "BILL_AMT1": 0,
+      "BILL_AMT2": 0,
+      "BILL_AMT3": 0,
+      "BILL_AMT4": 0,
+      "BILL_AMT5": 0,
+      "BILL_AMT6": 0,
+      "PAY_AMT1": 0,
+      "PAY_AMT2": 0,
+      "PAY_AMT3": 0,
+      "PAY_AMT4": 0,
+      "PAY_AMT5": 0,
+      "PAY_AMT6": 0
+    }
+  },
+  "arms": {
+    "bundled": {
+      "assessment": {
+        "protocol": "compiled-credit-llm/assessment-v1",
+        "status": "OK",
+        "decision": {
+          "outcome_code": "AS",
+          "outcome": "standard demonstration approval",
+          "level": "approve",
+          "controlling_rules": [],
+          "note": "no hard, review or soft rule is active, so the policy reaches standard approval"
+        },
+        "model": {
+          "probability": "0.325180560330",
+          "probability_pct": "32.5%",
+          "risk_band": "moderate",
+          "raw_margin": -0.730065
+        },
+        "policy": {
+          "id": "UCI_DEMO_POLICY_v1",
+          "priority": [
+            "hard",
+            "review",
+            "soft",
+            "approve"
+          ],
+          "active": {
+            "hard": [],
+            "review": [],
+            "soft": []
+          }
+        },
+        "drivers": {
+          "increasing_risk": [
+            {
+              "feature": "Most recent statement balance",
+              "code": "BILL_AMT1",
+              "contribution": 0.279844
+            },
+            {
+              "feature": "Payment amount three months ago",
+              "code": "PAY_AMT3",
+              "contribution": 0.275193
+            }
+          ],
+          "decreasing_risk": [
+            {
+              "feature": "Most recent repayment status",
+              "code": "PAY_0",
+              "contribution": -0.322735
+            },
+            {
+              "feature": "Statement balance three months ago",
+              "code": "BILL_AMT3",
+              "contribution": -0.096385
+            }
+          ]
+        },
+        "calculations": {
+          "current_utilization_pct": 0.0,
+          "max_utilization_pct": 0.0,
+          "avg_utilization_pct": 0.0,
+          "delinquent_statuses": 0,
+          "repeated_delinquency": false,
+          "max_severity": 0,
+          "payment_coverage_pct": 0.0,
+          "balance_trend_pct": 0.0,
+          "bill_dispersion": 0,
+          "payment_dispersion": 0,
+          "zero_payment_stress": false,
+          "positive_bill_total": 0,
+          "payment_total": 0
+        },
+        "data_quality": [
+          "a repayment code is undocumented in the UCI source"
+        ],
+        "recourse": {
+          "current_outcome": "standard demonstration approval",
+          "current_outcome_code": "AS",
+          "scope": "behavioural fields only: repayment statuses, statement balances, payments",
+          "non_behavioural_blockers": [],
+          "status": "ALREADY_BEST"
+        },
+        "explanation": "The credit analyst determines that the standard demonstration approval decision is active and the policy allows standard approval without hard, review, or soft rules. The model assigns a probability of 32.5% to the outcome, placing the case within a moderate risk band. The primary risk-increasing driver is the most recent statement balance, while the risk-decreasing driver is the payment amount three months ago. The active calculation metrics show zero utilization and zero payment coverage, indicating no active risk control mechanisms are engaged. A data quality flag indicates that a repayment code is undocumented in the UCI source, which may affect the reliability of the underlying data. The case is currently at the best status and is not expected to change based on the current behavior. The probability serves as a benchmark association rather than a cause or guarantee for the outcome.",
+        "explanation_status": "VERIFIED",
+        "boundary": "Synthetic demonstration policy UCI_DEMO_POLICY_v1 on the historical 2005 UCI benchmark; model probability is a benchmark output, not a validated real-world probability of default; contributions are associations, not causes; not a lending, regulatory or adverse-action decision.",
+        "receipt": "RECEIPT1|p=UDP1|s=-730064560|q=0.325180560330|o=AS|b=M|f=UR|t=AS|c=cu:0,mu:0,au:0,dc:0,rd:0,ms:0,pc:0,bt:0,bd:0,pd:0,zs:0,pb:0,pt:0|xp=BILL_AMT1:279843544,PAY_AMT3:275192831|xn=PAY_0:-322735309,BILL_AMT3:-96384892|r=AS|d=SYNTHETIC_NONREGULATORY_ASSOCIATIVE_NOT_CAUSAL"
+      },
+      "evidence": "EVIDENCE1|p=UDP1|s=-730064560|q=0.325180560330|o=AS|b=M|f=UR|t=AS|c=cu:0,mu:0,au:0,dc:0,rd:0,ms:0,pc:0,bt:0,bd:0,pd:0,zs:0,pb:0,pt:0|xp=BILL_AMT1:279843544,PAY_AMT3:275192831|xn=PAY_0:-322735309,BILL_AMT3:-96384892|r=AS",
+      "prompt": "ASSESSMENT_ROUTE|valid=1|validator=CHECKPOINT|verifier=CHECKPOINT\nEVIDENCE1|p=UDP1|s=-730064560|q=0.325180560330|o=AS|b=M|f=UR|t=AS|c=cu:0,mu:0,au:0,dc:0,rd:0,ms:0,pc:0,bt:0,bd:0,pd:0,zs:0,pb:0,pt:0|xp=BILL_AMT1:279843544,PAY_AMT3:275192831|xn=PAY_0:-322735309,BILL_AMT3:-96384892|r=AS\nFACTS={\"decision\":{\"outcome_code\":\"AS\",\"outcome\":\"standard demonstration approval\",\"level\":\"approve\",\"controlling_rules\":[],\"note\":\"no hard, review or soft rule is active, so the policy reaches standard approval\"},\"model\":{\"probability\":\"0.325180560330\",\"probability_pct\":\"32.5%\",\"risk_band\":\"moderate\"},\"policy\":{\"id\":\"UCI_DEMO_POLICY_v1\",\"priority\":[\"hard\",\"review\",\"soft\",\"approve\"],\"active\":{\"hard\":[],\"review\":[],\"soft\":[]}},\"drivers\":{\"increasing_risk\":[\"Most recent statement balance\",\"Payment amount three months ago\"],\"decreasing_risk\":[\"Most recent repayment status\",\"Statement balance three months ago\"]},\"calculations\":{\"current_utilization_pct\":0.0,\"max_utilization_pct\":0.0,\"avg_utilization_pct\":0.0,\"delinquent_statuses\":0,\"repeated_delinquency\":false,\"max_severity\":0,\"payment_coverage_pct\":0.0,\"balance_trend_pct\":0.0,\"bill_dispersion\":0,\"payment_dispersion\":0,\"zero_payment_stress\":false,\"positive_bill_total\":0,\"payment_total\":0},\"data_quality\":[\"a repayment code is undocumented in the UCI source\"],\"proximity\":{\"status\":\"already best\",\"blockers\":[]}}\nWrite one paragraph (4 to 7 sentences, 70 to 160 words) for a credit analyst: state the decision and the rule or rules that control it, give the model probability and band, name the main risk-increasing and risk-decreasing drivers, cite the calculations that matter for the active rules, mention any data-quality flag, say how close the case is to the next better outcome and what would change it (or that behaviour cannot change it), and close by noting the probability is a benchmark association, not a cause and not a guarantee. No quotation marks, no feature codes, no numbers other than those given.",
+      "seconds": 14.235730386999421,
+      "generation_invoked": true,
+      "generation": {
+        "prompt_sha256": "e78e7424346adc85148376a66eab75743d50f20695076313b135658685f28c4a",
+        "response": "The credit analyst determines that the standard demonstration approval decision is active and the policy allows standard approval without hard, review, or soft rules. The model assigns a probability of 32.5% to the outcome, placing the case within a moderate risk band. The primary risk-increasing driver is the most recent statement balance, while the risk-decreasing driver is the payment amount three months ago. The active calculation metrics show zero utilization and zero payment coverage, indicating no active risk control mechanisms are engaged. A data quality flag indicates that a repayment code is undocumented in the UCI source, which may affect the reliability of the underlying data. The case is currently at the best status and is not expected to change based on the current behavior. The probability serves as a benchmark association rather than a cause or guarantee for the outcome.",
+        "seconds": 14.171206148999772,
+        "new_tokens": 167
+      }
+    },
+    "separated": {
+      "assessment": {
+        "protocol": "compiled-credit-llm/assessment-v1",
+        "status": "OK",
+        "decision": {
+          "outcome_code": "AS",
+          "outcome": "standard demonstration approval",
+          "level": "approve",
+          "controlling_rules": [],
+          "note": "no hard, review or soft rule is active, so the policy reaches standard approval"
+        },
+        "model": {
+          "probability": "0.325180560330",
+          "probability_pct": "32.5%",
+          "risk_band": "moderate",
+          "raw_margin": -0.730065
+        },
+        "policy": {
+          "id": "UCI_DEMO_POLICY_v1",
+          "priority": [
+            "hard",
+            "review",
+            "soft",
+            "approve"
+          ],
+          "active": {
+            "hard": [],
+            "review": [],
+            "soft": []
+          }
+        },
+        "drivers": {
+          "increasing_risk": [
+            {
+              "feature": "Most recent statement balance",
+              "code": "BILL_AMT1",
+              "contribution": 0.279844
+            },
+            {
+              "feature": "Payment amount three months ago",
+              "code": "PAY_AMT3",
+              "contribution": 0.275193
+            }
+          ],
+          "decreasing_risk": [
+            {
+              "feature": "Most recent repayment status",
+              "code": "PAY_0",
+              "contribution": -0.322735
+            },
+            {
+              "feature": "Statement balance three months ago",
+              "code": "BILL_AMT3",
+              "contribution": -0.096385
+            }
+          ]
+        },
+        "calculations": {
+          "current_utilization_pct": 0.0,
+          "max_utilization_pct": 0.0,
+          "avg_utilization_pct": 0.0,
+          "delinquent_statuses": 0,
+          "repeated_delinquency": false,
+          "max_severity": 0,
+          "payment_coverage_pct": 0.0,
+          "balance_trend_pct": 0.0,
+          "bill_dispersion": 0,
+          "payment_dispersion": 0,
+          "zero_payment_stress": false,
+          "positive_bill_total": 0,
+          "payment_total": 0
+        },
+        "data_quality": [
+          "a repayment code is undocumented in the UCI source"
+        ],
+        "recourse": {
+          "current_outcome": "standard demonstration approval",
+          "current_outcome_code": "AS",
+          "scope": "behavioural fields only: repayment statuses, statement balances, payments",
+          "non_behavioural_blockers": [],
+          "status": "ALREADY_BEST"
+        },
+        "explanation": "The credit analyst determines that the standard demonstration approval decision is active and the policy allows standard approval without hard, review, or soft rules. The model assigns a probability of 32.5% to the outcome, placing the case within a moderate risk band. The primary risk-increasing driver is the most recent statement balance, while the risk-decreasing driver is the payment amount three months ago. The active calculation metrics show zero utilization and zero payment coverage, indicating no active risk control mechanisms are engaged. A data quality flag indicates that a repayment code is undocumented in the UCI source, which may affect the reliability of the underlying data. The case is currently at the best status and is not expected to change based on the current behavior. The probability serves as a benchmark association rather than a cause or guarantee for the outcome.",
+        "explanation_status": "VERIFIED",
+        "boundary": "Synthetic demonstration policy UCI_DEMO_POLICY_v1 on the historical 2005 UCI benchmark; model probability is a benchmark output, not a validated real-world probability of default; contributions are associations, not causes; not a lending, regulatory or adverse-action decision.",
+        "receipt": "RECEIPT1|p=UDP1|s=-730064560|q=0.325180560330|o=AS|b=M|f=UR|t=AS|c=cu:0,mu:0,au:0,dc:0,rd:0,ms:0,pc:0,bt:0,bd:0,pd:0,zs:0,pb:0,pt:0|xp=BILL_AMT1:279843544,PAY_AMT3:275192831|xn=PAY_0:-322735309,BILL_AMT3:-96384892|r=AS|d=SYNTHETIC_NONREGULATORY_ASSOCIATIVE_NOT_CAUSAL"
+      },
+      "evidence": "EVIDENCE1|p=UDP1|s=-730064560|q=0.325180560330|o=AS|b=M|f=UR|t=AS|c=cu:0,mu:0,au:0,dc:0,rd:0,ms:0,pc:0,bt:0,bd:0,pd:0,zs:0,pb:0,pt:0|xp=BILL_AMT1:279843544,PAY_AMT3:275192831|xn=PAY_0:-322735309,BILL_AMT3:-96384892|r=AS",
+      "prompt": "ASSESSMENT_ROUTE|valid=1|validator=CHECKPOINT|verifier=CHECKPOINT\nEVIDENCE1|p=UDP1|s=-730064560|q=0.325180560330|o=AS|b=M|f=UR|t=AS|c=cu:0,mu:0,au:0,dc:0,rd:0,ms:0,pc:0,bt:0,bd:0,pd:0,zs:0,pb:0,pt:0|xp=BILL_AMT1:279843544,PAY_AMT3:275192831|xn=PAY_0:-322735309,BILL_AMT3:-96384892|r=AS\nFACTS={\"decision\":{\"outcome_code\":\"AS\",\"outcome\":\"standard demonstration approval\",\"level\":\"approve\",\"controlling_rules\":[],\"note\":\"no hard, review or soft rule is active, so the policy reaches standard approval\"},\"model\":{\"probability\":\"0.325180560330\",\"probability_pct\":\"32.5%\",\"risk_band\":\"moderate\"},\"policy\":{\"id\":\"UCI_DEMO_POLICY_v1\",\"priority\":[\"hard\",\"review\",\"soft\",\"approve\"],\"active\":{\"hard\":[],\"review\":[],\"soft\":[]}},\"drivers\":{\"increasing_risk\":[\"Most recent statement balance\",\"Payment amount three months ago\"],\"decreasing_risk\":[\"Most recent repayment status\",\"Statement balance three months ago\"]},\"calculations\":{\"current_utilization_pct\":0.0,\"max_utilization_pct\":0.0,\"avg_utilization_pct\":0.0,\"delinquent_statuses\":0,\"repeated_delinquency\":false,\"max_severity\":0,\"payment_coverage_pct\":0.0,\"balance_trend_pct\":0.0,\"bill_dispersion\":0,\"payment_dispersion\":0,\"zero_payment_stress\":false,\"positive_bill_total\":0,\"payment_total\":0},\"data_quality\":[\"a repayment code is undocumented in the UCI source\"],\"proximity\":{\"status\":\"already best\",\"blockers\":[]}}\nWrite one paragraph (4 to 7 sentences, 70 to 160 words) for a credit analyst: state the decision and the rule or rules that control it, give the model probability and band, name the main risk-increasing and risk-decreasing drivers, cite the calculations that matter for the active rules, mention any data-quality flag, say how close the case is to the next better outcome and what would change it (or that behaviour cannot change it), and close by noting the probability is a benchmark association, not a cause and not a guarantee. No quotation marks, no feature codes, no numbers other than those given.",
+      "seconds": 13.902199001999179,
+      "generation_invoked": true,
+      "generation": {
+        "prompt_sha256": "e78e7424346adc85148376a66eab75743d50f20695076313b135658685f28c4a",
+        "response": "The credit analyst determines that the standard demonstration approval decision is active and the policy allows standard approval without hard, review, or soft rules. The model assigns a probability of 32.5% to the outcome, placing the case within a moderate risk band. The primary risk-increasing driver is the most recent statement balance, while the risk-decreasing driver is the payment amount three months ago. The active calculation metrics show zero utilization and zero payment coverage, indicating no active risk control mechanisms are engaged. A data quality flag indicates that a repayment code is undocumented in the UCI source, which may affect the reliability of the underlying data. The case is currently at the best status and is not expected to change based on the current behavior. The probability serves as a benchmark association rather than a cause or guarantee for the outcome.",
+        "seconds": 13.812602022000647,
+        "new_tokens": 167
+      },
+      "trusted_context": {
+        "request_hash": "645c61dadec23d03b22821c9753b920972e28e02f2c3816efa6e38da85310caa",
+        "context": {
+          "policy": "policy-v1",
+          "source": "approved-bureau",
+          "evidence_age_hours": 1,
+          "tenant": "tenant-a",
+          "evidence_tenant": "tenant-a",
+          "principal": "credit-officer"
+        },
+        "components": {
+          "scorer": "d8ae5b499126871a90a4b4f9fff88dc366ed9c813aadeace87e91054ea9b09fb",
+          "policy": "a0b354b41b16f21c1fbb02f63aeae22037f2236589e3ba0cdd3e7d6a10e16529",
+          "rego": "596412ad483253cbe50deddd2b2dc59e8b0fd255dd7da269f392eb0edf7c4e8f"
+        },
+        "registry_version": 1,
+        "context_hash": "b3db0d2793b047a8ab1547919fc60094aaf903064ec765fddfbe9cda3e3cd739"
+      },
+      "sandbox_record_status": "RECORDED"
+    }
+  },
+  "evidence_identical": true,
+  "prompt_identical": true,
+  "assessment_identical": true
+}

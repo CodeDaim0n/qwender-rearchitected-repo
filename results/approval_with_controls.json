@@ -1,0 +1,313 @@
+{
+  "case": "approval_with_controls",
+  "request": {
+    "action": "ASSESS",
+    "credit": {
+      "LIMIT_BAL": 80000,
+      "SEX": 2,
+      "EDUCATION": 2,
+      "MARRIAGE": 2,
+      "AGE": 35,
+      "PAY_0": 0,
+      "PAY_2": 0,
+      "PAY_3": 0,
+      "PAY_4": -1,
+      "PAY_5": -1,
+      "PAY_6": -1,
+      "BILL_AMT1": 48725,
+      "BILL_AMT2": 53095,
+      "BILL_AMT3": 56858,
+      "BILL_AMT4": 4849,
+      "BILL_AMT5": 4849,
+      "BILL_AMT6": 4849,
+      "PAY_AMT1": 10000,
+      "PAY_AMT2": 10000,
+      "PAY_AMT3": 4849,
+      "PAY_AMT4": 4849,
+      "PAY_AMT5": 4849,
+      "PAY_AMT6": 4849
+    }
+  },
+  "arms": {
+    "bundled": {
+      "assessment": {
+        "protocol": "compiled-credit-llm/assessment-v1",
+        "status": "OK",
+        "decision": {
+          "outcome_code": "AC",
+          "outcome": "approval with controls",
+          "level": "soft",
+          "controlling_rules": [
+            "a rising balance trend"
+          ],
+          "note": "first active level in priority order hard > review > soft > approve"
+        },
+        "model": {
+          "probability": "0.058081307163",
+          "probability_pct": "5.8%",
+          "risk_band": "low",
+          "raw_margin": -2.786075
+        },
+        "policy": {
+          "id": "UCI_DEMO_POLICY_v1",
+          "priority": [
+            "hard",
+            "review",
+            "soft",
+            "approve"
+          ],
+          "active": {
+            "hard": [],
+            "review": [],
+            "soft": [
+              "a rising balance trend"
+            ]
+          }
+        },
+        "drivers": {
+          "increasing_risk": [
+            {
+              "feature": "Credit limit amount",
+              "code": "LIMIT_BAL",
+              "contribution": 0.086802
+            },
+            {
+              "feature": "Statement balance three months ago",
+              "code": "BILL_AMT3",
+              "contribution": 0.075171
+            }
+          ],
+          "decreasing_risk": [
+            {
+              "feature": "Most recent repayment status",
+              "code": "PAY_0",
+              "contribution": -0.46311
+            },
+            {
+              "feature": "Payment amount two months ago",
+              "code": "PAY_AMT2",
+              "contribution": -0.244291
+            }
+          ]
+        },
+        "calculations": {
+          "current_utilization_pct": 60.9,
+          "max_utilization_pct": 71.07,
+          "avg_utilization_pct": 36.08,
+          "delinquent_statuses": 0,
+          "repeated_delinquency": false,
+          "max_severity": 0,
+          "payment_coverage_pct": 22.74,
+          "balance_trend_pct": 54.84,
+          "bill_dispersion": 24021,
+          "payment_dispersion": 2289,
+          "zero_payment_stress": false,
+          "positive_bill_total": 173225,
+          "payment_total": 39396
+        },
+        "data_quality": [
+          "a repayment code is undocumented in the UCI source"
+        ],
+        "recourse": {
+          "current_outcome": "approval with controls",
+          "current_outcome_code": "AC",
+          "scope": "behavioural fields only: repayment statuses, statement balances, payments",
+          "non_behavioural_blockers": [],
+          "status": "REACHABLE",
+          "next_better": {
+            "outcome": "standard demonstration approval",
+            "outcome_code": "AS",
+            "moves_needed": 1,
+            "moves": [
+              "most recent statement balance of at most 28,848 instead of 48,725 (balance growth below 30% of the limit)"
+            ],
+            "fields_changed": 1,
+            "model_after": {
+              "risk_band": "low",
+              "probability_pct": "5.8%"
+            }
+          },
+          "best_reachable": {
+            "outcome": "standard demonstration approval",
+            "outcome_code": "AS",
+            "moves_needed": 1,
+            "moves": [
+              "most recent statement balance of at most 28,848 instead of 48,725 (balance growth below 30% of the limit)"
+            ],
+            "fields_changed": 1,
+            "model_after": {
+              "risk_band": "low",
+              "probability_pct": "5.8%"
+            }
+          },
+          "proximity": "close"
+        },
+        "explanation": "The credit analyst determines that the case is approved with controls based on a soft decision rule that identifies a rising balance trend as the primary active factor, which is the first level in the priority hierarchy. The model assigns a probability of 5.8% to the outcome, placing it within a low risk band. The main risk-increasing driver is the credit limit amount, while the risk-decreasing driver is the most recent repayment status. The calculations show a current utilization of 60.9% and a max utilization of 71.07%, with a payment coverage of 22.74% and a balance trend of 54.84%. A data quality flag indicates that a repayment code is undocumented in the UCI source. The case is very close to the next better outcome, which is standard demonstration approval, and the behavior cannot change it. The probability is a benchmark association, not a cause and not a guarantee.",
+        "explanation_status": "VERIFIED",
+        "boundary": "Synthetic demonstration policy UCI_DEMO_POLICY_v1 on the historical 2005 UCI benchmark; model probability is a benchmark output, not a validated real-world probability of default; contributions are associations, not causes; not a lending, regulatory or adverse-action decision.",
+        "receipt": "RECEIPT1|p=UDP1|s=-2786075081|q=0.058081307163|o=AC|b=L|f=UR|t=CB|c=cu:6090,mu:7107,au:3608,dc:0,rd:0,ms:0,pc:2274,bt:5484,bd:24021,pd:2289,zs:0,pb:173225,pt:39396|xp=LIMIT_BAL:86801865,BILL_AMT3:75170531|xn=PAY_0:-463110270,PAY_AMT2:-244290662|r=CB|d=SYNTHETIC_NONREGULATORY_ASSOCIATIVE_NOT_CAUSAL"
+      },
+      "evidence": "EVIDENCE1|p=UDP1|s=-2786075081|q=0.058081307163|o=AC|b=L|f=UR|t=CB|c=cu:6090,mu:7107,au:3608,dc:0,rd:0,ms:0,pc:2274,bt:5484,bd:24021,pd:2289,zs:0,pb:173225,pt:39396|xp=LIMIT_BAL:86801865,BILL_AMT3:75170531|xn=PAY_0:-463110270,PAY_AMT2:-244290662|r=CB",
+      "prompt": "ASSESSMENT_ROUTE|valid=1|validator=CHECKPOINT|verifier=CHECKPOINT\nEVIDENCE1|p=UDP1|s=-2786075081|q=0.058081307163|o=AC|b=L|f=UR|t=CB|c=cu:6090,mu:7107,au:3608,dc:0,rd:0,ms:0,pc:2274,bt:5484,bd:24021,pd:2289,zs:0,pb:173225,pt:39396|xp=LIMIT_BAL:86801865,BILL_AMT3:75170531|xn=PAY_0:-463110270,PAY_AMT2:-244290662|r=CB\nFACTS={\"decision\":{\"outcome_code\":\"AC\",\"outcome\":\"approval with controls\",\"level\":\"soft\",\"controlling_rules\":[\"a rising balance trend\"],\"note\":\"first active level in priority order hard > review > soft > approve\"},\"model\":{\"probability\":\"0.058081307163\",\"probability_pct\":\"5.8%\",\"risk_band\":\"low\"},\"policy\":{\"id\":\"UCI_DEMO_POLICY_v1\",\"priority\":[\"hard\",\"review\",\"soft\",\"approve\"],\"active\":{\"hard\":[],\"review\":[],\"soft\":[\"a rising balance trend\"]}},\"drivers\":{\"increasing_risk\":[\"Credit limit amount\",\"Statement balance three months ago\"],\"decreasing_risk\":[\"Most recent repayment status\",\"Payment amount two months ago\"]},\"calculations\":{\"current_utilization_pct\":60.9,\"max_utilization_pct\":71.07,\"avg_utilization_pct\":36.08,\"delinquent_statuses\":0,\"repeated_delinquency\":false,\"max_severity\":0,\"payment_coverage_pct\":22.74,\"balance_trend_pct\":54.84,\"bill_dispersion\":24021,\"payment_dispersion\":2289,\"zero_payment_stress\":false,\"positive_bill_total\":173225,\"payment_total\":39396},\"data_quality\":[\"a repayment code is undocumented in the UCI source\"],\"proximity\":{\"status\":\"reachable\",\"blockers\":[],\"proximity\":\"close\",\"next_better_outcome\":\"standard demonstration approval\",\"moves_needed\":1,\"what_would_change_it\":[\"most recent statement balance of at most 28,848 instead of 48,725 (balance growth below 30% of the limit)\"],\"model_after_change\":{\"risk_band\":\"low\",\"probability_pct\":\"5.8%\"}}}\nWrite one paragraph (4 to 7 sentences, 70 to 160 words) for a credit analyst: state the decision and the rule or rules that control it, give the model probability and band, name the main risk-increasing and risk-decreasing drivers, cite the calculations that matter for the active rules, mention any data-quality flag, say how close the case is to the next better outcome and what would change it (or that behaviour cannot change it), and close by noting the probability is a benchmark association, not a cause and not a guarantee. No quotation marks, no feature codes, no numbers other than those given.",
+      "seconds": 16.305750135999915,
+      "generation_invoked": true,
+      "generation": {
+        "prompt_sha256": "3fd0b9be084b9d72be46d1bf751843343a48c79069236896adac9736aeb4c778",
+        "response": "The credit analyst determines that the case is approved with controls based on a soft decision rule that identifies a rising balance trend as the primary active factor, which is the first level in the priority hierarchy. The model assigns a probability of 5.8% to the outcome, placing it within a low risk band. The main risk-increasing driver is the credit limit amount, while the risk-decreasing driver is the most recent repayment status. The calculations show a current utilization of 60.9% and a max utilization of 71.07%, with a payment coverage of 22.74% and a balance trend of 54.84%. A data quality flag indicates that a repayment code is undocumented in the UCI source. The case is very close to the next better outcome, which is standard demonstration approval, and the behavior cannot change it. The probability is a benchmark association, not a cause and not a guarantee.",
+        "seconds": 16.09908841700053,
+        "new_tokens": 195
+      }
+    },
+    "separated": {
+      "assessment": {
+        "protocol": "compiled-credit-llm/assessment-v1",
+        "status": "OK",
+        "decision": {
+          "outcome_code": "AC",
+          "outcome": "approval with controls",
+          "level": "soft",
+          "controlling_rules": [
+            "a rising balance trend"
+          ],
+          "note": "first active level in priority order hard > review > soft > approve"
+        },
+        "model": {
+          "probability": "0.058081307163",
+          "probability_pct": "5.8%",
+          "risk_band": "low",
+          "raw_margin": -2.786075
+        },
+        "policy": {
+          "id": "UCI_DEMO_POLICY_v1",
+          "priority": [
+            "hard",
+            "review",
+            "soft",
+            "approve"
+          ],
+          "active": {
+            "hard": [],
+            "review": [],
+            "soft": [
+              "a rising balance trend"
+            ]
+          }
+        },
+        "drivers": {
+          "increasing_risk": [
+            {
+              "feature": "Credit limit amount",
+              "code": "LIMIT_BAL",
+              "contribution": 0.086802
+            },
+            {
+              "feature": "Statement balance three months ago",
+              "code": "BILL_AMT3",
+              "contribution": 0.075171
+            }
+          ],
+          "decreasing_risk": [
+            {
+              "feature": "Most recent repayment status",
+              "code": "PAY_0",
+              "contribution": -0.46311
+            },
+            {
+              "feature": "Payment amount two months ago",
+              "code": "PAY_AMT2",
+              "contribution": -0.244291
+            }
+          ]
+        },
+        "calculations": {
+          "current_utilization_pct": 60.9,
+          "max_utilization_pct": 71.07,
+          "avg_utilization_pct": 36.08,
+          "delinquent_statuses": 0,
+          "repeated_delinquency": false,
+          "max_severity": 0,
+          "payment_coverage_pct": 22.74,
+          "balance_trend_pct": 54.84,
+          "bill_dispersion": 24021,
+          "payment_dispersion": 2289,
+          "zero_payment_stress": false,
+          "positive_bill_total": 173225,
+          "payment_total": 39396
+        },
+        "data_quality": [
+          "a repayment code is undocumented in the UCI source"
+        ],
+        "recourse": {
+          "current_outcome": "approval with controls",
+          "current_outcome_code": "AC",
+          "scope": "behavioural fields only: repayment statuses, statement balances, payments",
+          "non_behavioural_blockers": [],
+          "status": "REACHABLE",
+          "next_better": {
+            "outcome": "standard demonstration approval",
+            "outcome_code": "AS",
+            "moves_needed": 1,
+            "moves": [
+              "most recent statement balance of at most 28,848 instead of 48,725 (balance growth below 30% of the limit)"
+            ],
+            "fields_changed": 1,
+            "model_after": {
+              "risk_band": "low",
+              "probability_pct": "5.8%"
+            }
+          },
+          "best_reachable": {
+            "outcome": "standard demonstration approval",
+            "outcome_code": "AS",
+            "moves_needed": 1,
+            "moves": [
+              "most recent statement balance of at most 28,848 instead of 48,725 (balance growth below 30% of the limit)"
+            ],
+            "fields_changed": 1,
+            "model_after": {
+              "risk_band": "low",
+              "probability_pct": "5.8%"
+            }
+          },
+          "proximity": "close"
+        },
+        "explanation": "The credit analyst determines that the case is approved with controls based on a soft decision rule that identifies a rising balance trend as the primary active factor, which is the first level in the priority hierarchy. The model assigns a probability of 5.8% to the outcome, placing it within a low risk band. The main risk-increasing driver is the credit limit amount, while the risk-decreasing driver is the most recent repayment status. The calculations show a current utilization of 60.9% and a max utilization of 71.07%, with a payment coverage of 22.74% and a balance trend of 54.84%. A data quality flag indicates that a repayment code is undocumented in the UCI source. The case is very close to the next better outcome, which is standard demonstration approval, and the behavior cannot change it. The probability is a benchmark association, not a cause and not a guarantee.",
+        "explanation_status": "VERIFIED",
+        "boundary": "Synthetic demonstration policy UCI_DEMO_POLICY_v1 on the historical 2005 UCI benchmark; model probability is a benchmark output, not a validated real-world probability of default; contributions are associations, not causes; not a lending, regulatory or adverse-action decision.",
+        "receipt": "RECEIPT1|p=UDP1|s=-2786075081|q=0.058081307163|o=AC|b=L|f=UR|t=CB|c=cu:6090,mu:7107,au:3608,dc:0,rd:0,ms:0,pc:2274,bt:5484,bd:24021,pd:2289,zs:0,pb:173225,pt:39396|xp=LIMIT_BAL:86801865,BILL_AMT3:75170531|xn=PAY_0:-463110270,PAY_AMT2:-244290662|r=CB|d=SYNTHETIC_NONREGULATORY_ASSOCIATIVE_NOT_CAUSAL"
+      },
+      "evidence": "EVIDENCE1|p=UDP1|s=-2786075081|q=0.058081307163|o=AC|b=L|f=UR|t=CB|c=cu:6090,mu:7107,au:3608,dc:0,rd:0,ms:0,pc:2274,bt:5484,bd:24021,pd:2289,zs:0,pb:173225,pt:39396|xp=LIMIT_BAL:86801865,BILL_AMT3:75170531|xn=PAY_0:-463110270,PAY_AMT2:-244290662|r=CB",
+      "prompt": "ASSESSMENT_ROUTE|valid=1|validator=CHECKPOINT|verifier=CHECKPOINT\nEVIDENCE1|p=UDP1|s=-2786075081|q=0.058081307163|o=AC|b=L|f=UR|t=CB|c=cu:6090,mu:7107,au:3608,dc:0,rd:0,ms:0,pc:2274,bt:5484,bd:24021,pd:2289,zs:0,pb:173225,pt:39396|xp=LIMIT_BAL:86801865,BILL_AMT3:75170531|xn=PAY_0:-463110270,PAY_AMT2:-244290662|r=CB\nFACTS={\"decision\":{\"outcome_code\":\"AC\",\"outcome\":\"approval with controls\",\"level\":\"soft\",\"controlling_rules\":[\"a rising balance trend\"],\"note\":\"first active level in priority order hard > review > soft > approve\"},\"model\":{\"probability\":\"0.058081307163\",\"probability_pct\":\"5.8%\",\"risk_band\":\"low\"},\"policy\":{\"id\":\"UCI_DEMO_POLICY_v1\",\"priority\":[\"hard\",\"review\",\"soft\",\"approve\"],\"active\":{\"hard\":[],\"review\":[],\"soft\":[\"a rising balance trend\"]}},\"drivers\":{\"increasing_risk\":[\"Credit limit amount\",\"Statement balance three months ago\"],\"decreasing_risk\":[\"Most recent repayment status\",\"Payment amount two months ago\"]},\"calculations\":{\"current_utilization_pct\":60.9,\"max_utilization_pct\":71.07,\"avg_utilization_pct\":36.08,\"delinquent_statuses\":0,\"repeated_delinquency\":false,\"max_severity\":0,\"payment_coverage_pct\":22.74,\"balance_trend_pct\":54.84,\"bill_dispersion\":24021,\"payment_dispersion\":2289,\"zero_payment_stress\":false,\"positive_bill_total\":173225,\"payment_total\":39396},\"data_quality\":[\"a repayment code is undocumented in the UCI source\"],\"proximity\":{\"status\":\"reachable\",\"blockers\":[],\"proximity\":\"close\",\"next_better_outcome\":\"standard demonstration approval\",\"moves_needed\":1,\"what_would_change_it\":[\"most recent statement balance of at most 28,848 instead of 48,725 (balance growth below 30% of the limit)\"],\"model_after_change\":{\"risk_band\":\"low\",\"probability_pct\":\"5.8%\"}}}\nWrite one paragraph (4 to 7 sentences, 70 to 160 words) for a credit analyst: state the decision and the rule or rules that control it, give the model probability and band, name the main risk-increasing and risk-decreasing drivers, cite the calculations that matter for the active rules, mention any data-quality flag, say how close the case is to the next better outcome and what would change it (or that behaviour cannot change it), and close by noting the probability is a benchmark association, not a cause and not a guarantee. No quotation marks, no feature codes, no numbers other than those given.",
+      "seconds": 17.319199057999867,
+      "generation_invoked": true,
+      "generation": {
+        "prompt_sha256": "3fd0b9be084b9d72be46d1bf751843343a48c79069236896adac9736aeb4c778",
+        "response": "The credit analyst determines that the case is approved with controls based on a soft decision rule that identifies a rising balance trend as the primary active factor, which is the first level in the priority hierarchy. The model assigns a probability of 5.8% to the outcome, placing it within a low risk band. The main risk-increasing driver is the credit limit amount, while the risk-decreasing driver is the most recent repayment status. The calculations show a current utilization of 60.9% and a max utilization of 71.07%, with a payment coverage of 22.74% and a balance trend of 54.84%. A data quality flag indicates that a repayment code is undocumented in the UCI source. The case is very close to the next better outcome, which is standard demonstration approval, and the behavior cannot change it. The probability is a benchmark association, not a cause and not a guarantee.",
+        "seconds": 17.17468478000046,
+        "new_tokens": 195
+      },
+      "trusted_context": {
+        "request_hash": "8a2f98db001966d79dfecab43f2a53ac2190661a98746787c1ae9d1d29f905b3",
+        "context": {
+          "policy": "policy-v1",
+          "source": "approved-bureau",
+          "evidence_age_hours": 1,
+          "tenant": "tenant-a",
+          "evidence_tenant": "tenant-a",
+          "principal": "credit-officer"
+        },
+        "components": {
+          "scorer": "d8ae5b499126871a90a4b4f9fff88dc366ed9c813aadeace87e91054ea9b09fb",
+          "policy": "a0b354b41b16f21c1fbb02f63aeae22037f2236589e3ba0cdd3e7d6a10e16529",
+          "rego": "596412ad483253cbe50deddd2b2dc59e8b0fd255dd7da269f392eb0edf7c4e8f"
+        },
+        "registry_version": 1,
+        "context_hash": "e9440b62960741ee182a337950df419295a6b6f020646c3c3ec544997f79a559"
+      },
+      "sandbox_record_status": "RECORDED"
+    }
+  },
+  "evidence_identical": true,
+  "prompt_identical": true,
+  "assessment_identical": true
+}

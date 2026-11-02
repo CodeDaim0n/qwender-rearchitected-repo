@@ -1,0 +1,327 @@
+{
+  "case": "decline_close_to_approval",
+  "request": {
+    "action": "ASSESS",
+    "credit": {
+      "LIMIT_BAL": 200000,
+      "SEX": 2,
+      "EDUCATION": 2,
+      "MARRIAGE": 1,
+      "AGE": 39,
+      "PAY_0": 3,
+      "PAY_2": 2,
+      "PAY_3": 2,
+      "PAY_4": 2,
+      "PAY_5": 2,
+      "PAY_6": 0,
+      "BILL_AMT1": 117868,
+      "BILL_AMT2": 114483,
+      "BILL_AMT3": 118855,
+      "BILL_AMT4": 125357,
+      "BILL_AMT5": 121853,
+      "BILL_AMT6": 124731,
+      "PAY_AMT1": 0,
+      "PAY_AMT2": 6216,
+      "PAY_AMT3": 10000,
+      "PAY_AMT4": 0,
+      "PAY_AMT5": 5000,
+      "PAY_AMT6": 4552
+    }
+  },
+  "arms": {
+    "bundled": {
+      "assessment": {
+        "protocol": "compiled-credit-llm/assessment-v1",
+        "status": "OK",
+        "decision": {
+          "outcome_code": "DD",
+          "outcome": "demonstration decline",
+          "level": "hard",
+          "controlling_rules": [
+            "severe delinquency"
+          ],
+          "note": "first active level in priority order hard > review > soft > approve"
+        },
+        "model": {
+          "probability": "0.698978159399",
+          "probability_pct": "69.9%",
+          "risk_band": "elevated",
+          "raw_margin": 0.842437
+        },
+        "policy": {
+          "id": "UCI_DEMO_POLICY_v1",
+          "priority": [
+            "hard",
+            "review",
+            "soft",
+            "approve"
+          ],
+          "active": {
+            "hard": [
+              "severe delinquency"
+            ],
+            "review": [
+              "multiple soft controls require review"
+            ],
+            "soft": [
+              "repeated delinquency",
+              "low payment coverage",
+              "elevated model risk"
+            ]
+          }
+        },
+        "drivers": {
+          "increasing_risk": [
+            {
+              "feature": "Most recent repayment status",
+              "code": "PAY_0",
+              "contribution": 1.566583
+            },
+            {
+              "feature": "Repayment status three months ago",
+              "code": "PAY_3",
+              "contribution": 0.236006
+            }
+          ],
+          "decreasing_risk": [
+            {
+              "feature": "Payment amount three months ago",
+              "code": "PAY_AMT3",
+              "contribution": -0.111109
+            },
+            {
+              "feature": "Credit limit amount",
+              "code": "LIMIT_BAL",
+              "contribution": -0.108503
+            }
+          ]
+        },
+        "calculations": {
+          "current_utilization_pct": 58.93,
+          "max_utilization_pct": 62.67,
+          "avg_utilization_pct": 60.26,
+          "delinquent_statuses": 5,
+          "repeated_delinquency": true,
+          "max_severity": 3,
+          "payment_coverage_pct": 3.56,
+          "balance_trend_pct": -3.44,
+          "bill_dispersion": 3455,
+          "payment_dispersion": 2863,
+          "zero_payment_stress": false,
+          "positive_bill_total": 723147,
+          "payment_total": 25768
+        },
+        "data_quality": [
+          "a repayment code is undocumented in the UCI source"
+        ],
+        "recourse": {
+          "current_outcome": "demonstration decline",
+          "current_outcome_code": "DD",
+          "scope": "behavioural fields only: repayment statuses, statement balances, payments",
+          "non_behavioural_blockers": [],
+          "status": "REACHABLE",
+          "next_better": {
+            "outcome": "approval with controls",
+            "outcome_code": "AC",
+            "moves_needed": 1,
+            "moves": [
+              "all six repayment statuses paid on time (no month in delay)"
+            ],
+            "fields_changed": 5,
+            "model_after": {
+              "risk_band": "low",
+              "probability_pct": "11.7%"
+            }
+          },
+          "best_reachable": {
+            "outcome": "standard demonstration approval",
+            "outcome_code": "AS",
+            "moves_needed": 2,
+            "moves": [
+              "all six repayment statuses paid on time (no month in delay)",
+              "total payments over the six months of at least 72,315 instead of 25,768 (payment coverage 10.00% of positive bills)"
+            ],
+            "fields_changed": 6,
+            "model_after": {
+              "risk_band": "low",
+              "probability_pct": "9.8%"
+            }
+          },
+          "proximity": "close"
+        },
+        "explanation": "The credit analyst determines that the demonstration decline outcome code DD is the correct decision for the case, which is controlled by the severe delinquency rule. The model assigns a probability of 69.9% to the demonstration decline, placing the case in an elevated risk band. The primary risk-increasing driver is the most recent repayment status, while the risk-decreasing driver is the payment amount three months ago. The active rules for hard severity are severe delinquency, and the controlling rules for review are multiple soft controls requiring review. The calculations show a current utilization of 58.93% with a max of 62.67%, indicating a significant increase in risk. The data quality flag indicates that a repayment code is undocumented in the UCI source. The case is very close to the next better outcome of approval with controls, and the behavior cannot change it. The probability is a benchmark association, not a cause and not a guarantee.",
+        "explanation_status": "VERIFIED",
+        "boundary": "Synthetic demonstration policy UCI_DEMO_POLICY_v1 on the historical 2005 UCI benchmark; model probability is a benchmark output, not a validated real-world probability of default; contributions are associations, not causes; not a lending, regulatory or adverse-action decision.",
+        "receipt": "RECEIPT1|p=UDP1|s=842436674|q=0.698978159399|o=DD|b=E|f=UR|t=DS,RM,CD,CP,CE|c=cu:5893,mu:6267,au:6026,dc:5,rd:1,ms:3,pc:356,bt:-344,bd:3455,pd:2863,zs:0,pb:723147,pt:25768|xp=PAY_0:1566582685,PAY_3:236005769|xn=PAY_AMT3:-111109176,LIMIT_BAL:-108502861|r=DS|d=SYNTHETIC_NONREGULATORY_ASSOCIATIVE_NOT_CAUSAL"
+      },
+      "evidence": "EVIDENCE1|p=UDP1|s=842436674|q=0.698978159399|o=DD|b=E|f=UR|t=DS,RM,CD,CP,CE|c=cu:5893,mu:6267,au:6026,dc:5,rd:1,ms:3,pc:356,bt:-344,bd:3455,pd:2863,zs:0,pb:723147,pt:25768|xp=PAY_0:1566582685,PAY_3:236005769|xn=PAY_AMT3:-111109176,LIMIT_BAL:-108502861|r=DS",
+      "prompt": "ASSESSMENT_ROUTE|valid=1|validator=CHECKPOINT|verifier=CHECKPOINT\nEVIDENCE1|p=UDP1|s=842436674|q=0.698978159399|o=DD|b=E|f=UR|t=DS,RM,CD,CP,CE|c=cu:5893,mu:6267,au:6026,dc:5,rd:1,ms:3,pc:356,bt:-344,bd:3455,pd:2863,zs:0,pb:723147,pt:25768|xp=PAY_0:1566582685,PAY_3:236005769|xn=PAY_AMT3:-111109176,LIMIT_BAL:-108502861|r=DS\nFACTS={\"decision\":{\"outcome_code\":\"DD\",\"outcome\":\"demonstration decline\",\"level\":\"hard\",\"controlling_rules\":[\"severe delinquency\"],\"note\":\"first active level in priority order hard > review > soft > approve\"},\"model\":{\"probability\":\"0.698978159399\",\"probability_pct\":\"69.9%\",\"risk_band\":\"elevated\"},\"policy\":{\"id\":\"UCI_DEMO_POLICY_v1\",\"priority\":[\"hard\",\"review\",\"soft\",\"approve\"],\"active\":{\"hard\":[\"severe delinquency\"],\"review\":[\"multiple soft controls require review\"],\"soft\":[\"repeated delinquency\",\"low payment coverage\",\"elevated model risk\"]}},\"drivers\":{\"increasing_risk\":[\"Most recent repayment status\",\"Repayment status three months ago\"],\"decreasing_risk\":[\"Payment amount three months ago\",\"Credit limit amount\"]},\"calculations\":{\"current_utilization_pct\":58.93,\"max_utilization_pct\":62.67,\"avg_utilization_pct\":60.26,\"delinquent_statuses\":5,\"repeated_delinquency\":true,\"max_severity\":3,\"payment_coverage_pct\":3.56,\"balance_trend_pct\":-3.44,\"bill_dispersion\":3455,\"payment_dispersion\":2863,\"zero_payment_stress\":false,\"positive_bill_total\":723147,\"payment_total\":25768},\"data_quality\":[\"a repayment code is undocumented in the UCI source\"],\"proximity\":{\"status\":\"reachable\",\"blockers\":[],\"proximity\":\"close\",\"next_better_outcome\":\"approval with controls\",\"moves_needed\":1,\"what_would_change_it\":[\"all six repayment statuses paid on time (no month in delay)\"],\"model_after_change\":{\"risk_band\":\"low\",\"probability_pct\":\"11.7%\"},\"best_reachable_outcome\":\"standard demonstration approval\",\"best_reachable_moves\":[\"all six repayment statuses paid on time (no month in delay)\",\"total payments over the six months of at least 72,315 instead of 25,768 (payment coverage 10.00% of positive bills)\"]}}\nWrite one paragraph (4 to 7 sentences, 70 to 160 words) for a credit analyst: state the decision and the rule or rules that control it, give the model probability and band, name the main risk-increasing and risk-decreasing drivers, cite the calculations that matter for the active rules, mention any data-quality flag, say how close the case is to the next better outcome and what would change it (or that behaviour cannot change it), and close by noting the probability is a benchmark association, not a cause and not a guarantee. No quotation marks, no feature codes, no numbers other than those given.",
+      "seconds": 19.563161104000756,
+      "generation_invoked": true,
+      "generation": {
+        "prompt_sha256": "3f56759b890eafb347de046437c80110e6f5ae5d345677e090e409ccc1304028",
+        "response": "The credit analyst determines that the demonstration decline outcome code DD is the correct decision for the case, which is controlled by the severe delinquency rule. The model assigns a probability of 69.9% to the demonstration decline, placing the case in an elevated risk band. The primary risk-increasing driver is the most recent repayment status, while the risk-decreasing driver is the payment amount three months ago. The active rules for hard severity are severe delinquency, and the controlling rules for review are multiple soft controls requiring review. The calculations show a current utilization of 58.93% with a max of 62.67%, indicating a significant increase in risk. The data quality flag indicates that a repayment code is undocumented in the UCI source. The case is very close to the next better outcome of approval with controls, and the behavior cannot change it. The probability is a benchmark association, not a cause and not a guarantee.",
+        "seconds": 19.458655350999834,
+        "new_tokens": 197
+      }
+    },
+    "separated": {
+      "assessment": {
+        "protocol": "compiled-credit-llm/assessment-v1",
+        "status": "OK",
+        "decision": {
+          "outcome_code": "DD",
+          "outcome": "demonstration decline",
+          "level": "hard",
+          "controlling_rules": [
+            "severe delinquency"
+          ],
+          "note": "first active level in priority order hard > review > soft > approve"
+        },
+        "model": {
+          "probability": "0.698978159399",
+          "probability_pct": "69.9%",
+          "risk_band": "elevated",
+          "raw_margin": 0.842437
+        },
+        "policy": {
+          "id": "UCI_DEMO_POLICY_v1",
+          "priority": [
+            "hard",
+            "review",
+            "soft",
+            "approve"
+          ],
+          "active": {
+            "hard": [
+              "severe delinquency"
+            ],
+            "review": [
+              "multiple soft controls require review"
+            ],
+            "soft": [
+              "repeated delinquency",
+              "low payment coverage",
+              "elevated model risk"
+            ]
+          }
+        },
+        "drivers": {
+          "increasing_risk": [
+            {
+              "feature": "Most recent repayment status",
+              "code": "PAY_0",
+              "contribution": 1.566583
+            },
+            {
+              "feature": "Repayment status three months ago",
+              "code": "PAY_3",
+              "contribution": 0.236006
+            }
+          ],
+          "decreasing_risk": [
+            {
+              "feature": "Payment amount three months ago",
+              "code": "PAY_AMT3",
+              "contribution": -0.111109
+            },
+            {
+              "feature": "Credit limit amount",
+              "code": "LIMIT_BAL",
+              "contribution": -0.108503
+            }
+          ]
+        },
+        "calculations": {
+          "current_utilization_pct": 58.93,
+          "max_utilization_pct": 62.67,
+          "avg_utilization_pct": 60.26,
+          "delinquent_statuses": 5,
+          "repeated_delinquency": true,
+          "max_severity": 3,
+          "payment_coverage_pct": 3.56,
+          "balance_trend_pct": -3.44,
+          "bill_dispersion": 3455,
+          "payment_dispersion": 2863,
+          "zero_payment_stress": false,
+          "positive_bill_total": 723147,
+          "payment_total": 25768
+        },
+        "data_quality": [
+          "a repayment code is undocumented in the UCI source"
+        ],
+        "recourse": {
+          "current_outcome": "demonstration decline",
+          "current_outcome_code": "DD",
+          "scope": "behavioural fields only: repayment statuses, statement balances, payments",
+          "non_behavioural_blockers": [],
+          "status": "REACHABLE",
+          "next_better": {
+            "outcome": "approval with controls",
+            "outcome_code": "AC",
+            "moves_needed": 1,
+            "moves": [
+              "all six repayment statuses paid on time (no month in delay)"
+            ],
+            "fields_changed": 5,
+            "model_after": {
+              "risk_band": "low",
+              "probability_pct": "11.7%"
+            }
+          },
+          "best_reachable": {
+            "outcome": "standard demonstration approval",
+            "outcome_code": "AS",
+            "moves_needed": 2,
+            "moves": [
+              "all six repayment statuses paid on time (no month in delay)",
+              "total payments over the six months of at least 72,315 instead of 25,768 (payment coverage 10.00% of positive bills)"
+            ],
+            "fields_changed": 6,
+            "model_after": {
+              "risk_band": "low",
+              "probability_pct": "9.8%"
+            }
+          },
+          "proximity": "close"
+        },
+        "explanation": "The credit analyst determines that the demonstration decline outcome code DD is the correct decision for the case, which is controlled by the severe delinquency rule. The model assigns a probability of 69.9% to the demonstration decline, placing the case in an elevated risk band. The primary risk-increasing driver is the most recent repayment status, while the risk-decreasing driver is the payment amount three months ago. The active rules for hard severity are severe delinquency, and the controlling rules for review are multiple soft controls requiring review. The calculations show a current utilization of 58.93% with a max of 62.67%, indicating a significant increase in risk. The data quality flag indicates that a repayment code is undocumented in the UCI source. The case is very close to the next better outcome of approval with controls, and the behavior cannot change it. The probability is a benchmark association, not a cause and not a guarantee.",
+        "explanation_status": "VERIFIED",
+        "boundary": "Synthetic demonstration policy UCI_DEMO_POLICY_v1 on the historical 2005 UCI benchmark; model probability is a benchmark output, not a validated real-world probability of default; contributions are associations, not causes; not a lending, regulatory or adverse-action decision.",
+        "receipt": "RECEIPT1|p=UDP1|s=842436674|q=0.698978159399|o=DD|b=E|f=UR|t=DS,RM,CD,CP,CE|c=cu:5893,mu:6267,au:6026,dc:5,rd:1,ms:3,pc:356,bt:-344,bd:3455,pd:2863,zs:0,pb:723147,pt:25768|xp=PAY_0:1566582685,PAY_3:236005769|xn=PAY_AMT3:-111109176,LIMIT_BAL:-108502861|r=DS|d=SYNTHETIC_NONREGULATORY_ASSOCIATIVE_NOT_CAUSAL"
+      },
+      "evidence": "EVIDENCE1|p=UDP1|s=842436674|q=0.698978159399|o=DD|b=E|f=UR|t=DS,RM,CD,CP,CE|c=cu:5893,mu:6267,au:6026,dc:5,rd:1,ms:3,pc:356,bt:-344,bd:3455,pd:2863,zs:0,pb:723147,pt:25768|xp=PAY_0:1566582685,PAY_3:236005769|xn=PAY_AMT3:-111109176,LIMIT_BAL:-108502861|r=DS",
+      "prompt": "ASSESSMENT_ROUTE|valid=1|validator=CHECKPOINT|verifier=CHECKPOINT\nEVIDENCE1|p=UDP1|s=842436674|q=0.698978159399|o=DD|b=E|f=UR|t=DS,RM,CD,CP,CE|c=cu:5893,mu:6267,au:6026,dc:5,rd:1,ms:3,pc:356,bt:-344,bd:3455,pd:2863,zs:0,pb:723147,pt:25768|xp=PAY_0:1566582685,PAY_3:236005769|xn=PAY_AMT3:-111109176,LIMIT_BAL:-108502861|r=DS\nFACTS={\"decision\":{\"outcome_code\":\"DD\",\"outcome\":\"demonstration decline\",\"level\":\"hard\",\"controlling_rules\":[\"severe delinquency\"],\"note\":\"first active level in priority order hard > review > soft > approve\"},\"model\":{\"probability\":\"0.698978159399\",\"probability_pct\":\"69.9%\",\"risk_band\":\"elevated\"},\"policy\":{\"id\":\"UCI_DEMO_POLICY_v1\",\"priority\":[\"hard\",\"review\",\"soft\",\"approve\"],\"active\":{\"hard\":[\"severe delinquency\"],\"review\":[\"multiple soft controls require review\"],\"soft\":[\"repeated delinquency\",\"low payment coverage\",\"elevated model risk\"]}},\"drivers\":{\"increasing_risk\":[\"Most recent repayment status\",\"Repayment status three months ago\"],\"decreasing_risk\":[\"Payment amount three months ago\",\"Credit limit amount\"]},\"calculations\":{\"current_utilization_pct\":58.93,\"max_utilization_pct\":62.67,\"avg_utilization_pct\":60.26,\"delinquent_statuses\":5,\"repeated_delinquency\":true,\"max_severity\":3,\"payment_coverage_pct\":3.56,\"balance_trend_pct\":-3.44,\"bill_dispersion\":3455,\"payment_dispersion\":2863,\"zero_payment_stress\":false,\"positive_bill_total\":723147,\"payment_total\":25768},\"data_quality\":[\"a repayment code is undocumented in the UCI source\"],\"proximity\":{\"status\":\"reachable\",\"blockers\":[],\"proximity\":\"close\",\"next_better_outcome\":\"approval with controls\",\"moves_needed\":1,\"what_would_change_it\":[\"all six repayment statuses paid on time (no month in delay)\"],\"model_after_change\":{\"risk_band\":\"low\",\"probability_pct\":\"11.7%\"},\"best_reachable_outcome\":\"standard demonstration approval\",\"best_reachable_moves\":[\"all six repayment statuses paid on time (no month in delay)\",\"total payments over the six months of at least 72,315 instead of 25,768 (payment coverage 10.00% of positive bills)\"]}}\nWrite one paragraph (4 to 7 sentences, 70 to 160 words) for a credit analyst: state the decision and the rule or rules that control it, give the model probability and band, name the main risk-increasing and risk-decreasing drivers, cite the calculations that matter for the active rules, mention any data-quality flag, say how close the case is to the next better outcome and what would change it (or that behaviour cannot change it), and close by noting the probability is a benchmark association, not a cause and not a guarantee. No quotation marks, no feature codes, no numbers other than those given.",
+      "seconds": 18.441707591000522,
+      "generation_invoked": true,
+      "generation": {
+        "prompt_sha256": "3f56759b890eafb347de046437c80110e6f5ae5d345677e090e409ccc1304028",
+        "response": "The credit analyst determines that the demonstration decline outcome code DD is the correct decision for the case, which is controlled by the severe delinquency rule. The model assigns a probability of 69.9% to the demonstration decline, placing the case in an elevated risk band. The primary risk-increasing driver is the most recent repayment status, while the risk-decreasing driver is the payment amount three months ago. The active rules for hard severity are severe delinquency, and the controlling rules for review are multiple soft controls requiring review. The calculations show a current utilization of 58.93% with a max of 62.67%, indicating a significant increase in risk. The data quality flag indicates that a repayment code is undocumented in the UCI source. The case is very close to the next better outcome of approval with controls, and the behavior cannot change it. The probability is a benchmark association, not a cause and not a guarantee.",
+        "seconds": 18.30086059399946,
+        "new_tokens": 197
+      },
+      "trusted_context": {
+        "request_hash": "9411db5ba27e3f6a3bc5fe1c4e7119cf8021ef745c7bfa360f1e4fab65cac1d9",
+        "context": {
+          "policy": "policy-v1",
+          "source": "approved-bureau",
+          "evidence_age_hours": 1,
+          "tenant": "tenant-a",
+          "evidence_tenant": "tenant-a",
+          "principal": "credit-officer"
+        },
+        "components": {
+          "scorer": "d8ae5b499126871a90a4b4f9fff88dc366ed9c813aadeace87e91054ea9b09fb",
+          "policy": "a0b354b41b16f21c1fbb02f63aeae22037f2236589e3ba0cdd3e7d6a10e16529",
+          "rego": "596412ad483253cbe50deddd2b2dc59e8b0fd255dd7da269f392eb0edf7c4e8f"
+        },
+        "registry_version": 1,
+        "context_hash": "6976e135a976eda8cb1dfa40fbda8e9f949ccaba5d1d6b1889bdcbb51319fab4"
+      },
+      "sandbox_record_status": "RECORDED"
+    }
+  },
+  "evidence_identical": true,
+  "prompt_identical": true,
+  "assessment_identical": true
+}
