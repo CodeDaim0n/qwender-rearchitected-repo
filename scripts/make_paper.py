@@ -57,7 +57,7 @@ page('1. Architecture and research question')
 add('The original already separates deterministic arithmetic from language generation. Its architectural choice is to ship these components under one checkpoint identity. Our question concerns independent governance and deployment artifacts, not whether an LLM should calculate credit decisions.')
 story.append(Image(str(ROOT/'docs/architecture_comparison.png'),width=499,height=420))
 add('Figure 1. Left: original source design. Right: implemented component refactor. The right side is a modular Python application with a separate OPA process; it is not a deployed microservices system.','SmallLab')
-add('The DataNext Christmas pattern is adapted to credit: source and version relationships determine applicable evidence; policy is evaluated explicitly; the writer receives fixed facts; an application gate separately checks authority before a sandbox write. The graph here is a minimal policy-approval and decision-lineage graph, not an enterprise ontology.','BodyLab')
+add('This independent credit architecture uses source and version relationships to determine applicable evidence; policy is evaluated explicitly; the writer receives fixed facts; an application gate separately checks authority before a sandbox write. The graph here is a minimal policy-approval and decision-lineage graph, not an enterprise ontology.','BodyLab')
 
 page('2. What changed and what stayed fixed')
 table([['Layer','Original path','Separated path'],

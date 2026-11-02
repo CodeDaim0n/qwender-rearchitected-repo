@@ -1,7 +1,7 @@
 # Credit Architecture Lab
 
 A working, non-commercial comparison of Qwenderwriter's bundled credit engine
-and a component architecture derived from the DataNext governance pattern.
+and an independently designed component architecture for governed credit workflows.
 
 **Measured result:** all seven complete assessment JSON responses match when
 both paths use identical Qwen3.5-0.8B base weights, prompts and decoding. External
