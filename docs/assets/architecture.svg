@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1230" viewBox="0 0 1600 1230" role="img" aria-labelledby="title desc">
+<title id="title">The implemented credit architecture</title><desc id="desc">A trusted-context boundary precedes exact scoring and external OPA policy. Structured evidence feeds an optional Qwen writer and its verifier, then a separate gate authorizes a sandbox record and linked lineage.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#708692"/></marker></defs>
+<rect width="1600" height="1230" rx="24" fill="#FFFFFF"/>
+<text x="52" y="62" fill="#007F78" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start" letter-spacing="2">THE IMPLEMENTED ARCHITECTURE</text>
+<text x="52" y="111" fill="#152B3C" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" text-anchor="start">Every decision has evidence. Every action has a gate.</text>
+<text x="52" y="152" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">Real component boundaries; synthetic authority and source assertions in this research prototype.</text>
+<rect x="32" y="186" width="1536" height="190" rx="18" fill="#F4F7F9" stroke="#F4F7F9"/>
+<text x="54" y="219" fill="#007F78" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">A</text>
+<text x="84" y="219" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="start" letter-spacing="1">QUALIFY THE CONTEXT</text>
+<rect x="32" y="396" width="1536" height="338" rx="18" fill="#F4F7F9" stroke="#F4F7F9"/>
+<text x="54" y="429" fill="#007F78" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">B</text>
+<text x="84" y="429" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="start" letter-spacing="1">ASSESS THE CREDIT</text>
+<rect x="32" y="754" width="1536" height="196" rx="18" fill="#F4F7F9" stroke="#F4F7F9"/>
+<text x="54" y="787" fill="#007F78" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">C</text>
+<text x="84" y="787" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="start" letter-spacing="1">EXPLAIN THE RESULT</text>
+<rect x="32" y="970" width="1536" height="202" rx="18" fill="#F4F7F9" stroke="#F4F7F9"/>
+<text x="54" y="1003" fill="#007F78" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">D</text>
+<text x="84" y="1003" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="start" letter-spacing="1">AUTHORIZE THE EFFECT</text>
+<rect x="58" y="241" width="430" height="108" rx="14" fill="#FFFFFF" stroke="#CFDCE3"/>
+<rect x="76" y="259" width="34" height="30" rx="7" fill="#007F78" stroke="#007F78"/>
+<text x="93" y="280" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="middle">01</text>
+<text x="124" y="281" fill="#152B3C" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">Evidence / approval graph</text>
+<text x="80" y="319" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Source · tenant · active policy · approval</text>
+<rect x="570" y="241" width="456" height="108" rx="14" fill="#FFFFFF" stroke="#CFDCE3"/>
+<rect x="588" y="259" width="34" height="30" rx="7" fill="#007F78" stroke="#007F78"/>
+<text x="605" y="280" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="middle">02</text>
+<text x="636" y="281" fill="#152B3C" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">Trusted-context manifest</text>
+<text x="592" y="319" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Request + component hashes + version</text>
+<rect x="1106" y="241" width="412" height="108" rx="14" fill="#FFFFFF" stroke="#CFDCE3"/>
+<rect x="1124" y="259" width="34" height="30" rx="7" fill="#007F78" stroke="#007F78"/>
+<text x="1141" y="280" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="middle">03</text>
+<text x="1172" y="281" fill="#152B3C" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">Typed request validation</text>
+<text x="1128" y="319" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">23 fields · integer / null contract</text>
+<path d="M488 293 L570 293" fill="none" stroke="#708692" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M1026 293 L1106 293" fill="none" stroke="#708692" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="58" y="456" width="430" height="131" rx="14" fill="#FFFFFF" stroke="#CFDCE3"/>
+<rect x="76" y="474" width="34" height="30" rx="7" fill="#007F78" stroke="#007F78"/>
+<text x="93" y="495" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="middle">04</text>
+<text x="124" y="496" fill="#152B3C" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">Score + attribution</text>
+<text x="80" y="534" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Exact tree margin + TreeSHAP</text>
+<text x="80" y="561" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">No language weights loaded</text>
+<rect x="570" y="456" width="456" height="131" rx="14" fill="#FFFFFF" stroke="#CFDCE3"/>
+<rect x="588" y="474" width="34" height="30" rx="7" fill="#007F78" stroke="#007F78"/>
+<text x="605" y="495" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="middle">05</text>
+<text x="636" y="496" fill="#152B3C" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">Feature calculations</text>
+<text x="592" y="534" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Independent NumPy calculations</text>
+<text x="592" y="561" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Utilization · delinquency · payments</text>
+<rect x="1106" y="456" width="412" height="131" rx="14" fill="#FFFFFF" stroke="#CFDCE3"/>
+<rect x="1124" y="474" width="34" height="30" rx="7" fill="#007F78" stroke="#007F78"/>
+<text x="1141" y="495" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="middle">06</text>
+<text x="1172" y="496" fill="#152B3C" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">OPA credit policy</text>
+<text x="1128" y="534" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Priority rules in Rego</text>
+<text x="1128" y="561" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Versioned thresholds and bounds</text>
+<path d="M1312 349 L1312 385 L440 385 L440 456" fill="none" stroke="#708692" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M488 521 L570 521" fill="none" stroke="#708692" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M1026 521 L1106 521" fill="none" stroke="#708692" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="799" y="443" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="middle">fixed margin + raw values</text>
+<rect x="58" y="632" width="1460" height="75" rx="12" fill="#FFFFFF" stroke="#CFDCE3"/>
+<text x="83" y="664" fill="#007F78" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="start">07  EVIDENCE + RECOURSE</text>
+<text x="83" y="692" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">Decision · controlling rules · drivers · calculations · bounded recourse · reproducible receipt</text>
+<path d="M1312 587 L1312 632" fill="none" stroke="#708692" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="58" y="808" width="645" height="112" rx="14" fill="#FFFFFF" stroke="#CFDCE3"/>
+<rect x="76" y="826" width="34" height="30" rx="7" fill="#B95138" stroke="#B95138"/>
+<text x="93" y="847" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="middle">08</text>
+<text x="124" y="848" fill="#152B3C" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">Qwen writer + explanation verifier</text>
+<text x="80" y="886" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Same prompt and base weights in the paired experiment</text>
+<text x="80" y="913" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Verifier rejection withholds the paragraph, not the assessment</text>
+<rect x="835" y="808" width="683" height="112" rx="14" fill="#FFFFFF" stroke="#CFDCE3"/>
+<rect x="853" y="826" width="34" height="30" rx="7" fill="#B95138" stroke="#B95138"/>
+<text x="870" y="847" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="middle">09</text>
+<text x="901" y="848" fill="#152B3C" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">Assembled assessment</text>
+<text x="857" y="886" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Structured JSON + receipt; optional verified paragraph</text>
+<text x="857" y="913" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Language generation can be disabled</text>
+<path d="M510 707 L510 808" fill="none" stroke="#708692" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="530" y="764" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">facts</text>
+<path d="M1312 707 L1312 808" fill="none" stroke="#708692" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="1060" y="764" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">structured assessment</text>
+<path d="M703 864 L835 864" fill="none" stroke="#708692" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="713" y="846" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">optional text</text>
+<rect x="58" y="1024" width="468" height="118" rx="14" fill="#FFFFFF" stroke="#CFDCE3"/>
+<rect x="76" y="1042" width="34" height="30" rx="7" fill="#B95138" stroke="#B95138"/>
+<text x="93" y="1063" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="middle">10</text>
+<text x="124" y="1064" fill="#152B3C" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">Execution gate</text>
+<text x="80" y="1102" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Recheck live context + component identity</text>
+<text x="80" y="1129" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Require a separate recording permission</text>
+<rect x="606" y="1024" width="422" height="118" rx="14" fill="#FFFFFF" stroke="#CFDCE3"/>
+<rect x="624" y="1042" width="34" height="30" rx="7" fill="#007F78" stroke="#007F78"/>
+<text x="641" y="1063" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="middle">11</text>
+<text x="672" y="1064" fill="#152B3C" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">Sandbox ledger</text>
+<text x="628" y="1102" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">SQLite idempotency key</text>
+<text x="628" y="1129" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Same retry = no duplicate record</text>
+<rect x="1106" y="1024" width="412" height="118" rx="14" fill="#FFFFFF" stroke="#CFDCE3"/>
+<rect x="1124" y="1042" width="34" height="30" rx="7" fill="#007F78" stroke="#007F78"/>
+<text x="1141" y="1063" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="middle">12</text>
+<text x="1172" y="1064" fill="#152B3C" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="start">Linked lineage</text>
+<text x="1128" y="1102" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Policy + evidence + decision links</text>
+<text x="1128" y="1129" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Timestamped, hash-linked events</text>
+<path d="M1176 920 L1176 960 L470 960 L470 1024" fill="none" stroke="#708692" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M526 1083 L606 1083" fill="none" stroke="#708692" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M1028 1083 L1106 1083" fill="none" stroke="#708692" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="52" y="1191" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">Deployment scope: Python components + OPA subprocess. No live lending system, production IAM or immutable audit-store claim.</text>
+</svg>

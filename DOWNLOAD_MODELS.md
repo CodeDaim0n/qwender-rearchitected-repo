@@ -1,23 +1,59 @@
-# Download and restore the measured model artifacts
+# Models: public rebuild and artifact restoration
 
-The full model archive is 1.90 GB and is stored in four verified parts. Download every part into the same folder. Access uses your ChatGPT account.
+[← Overview](README.md) · [Quickstart](docs/QUICKSTART.md) · [Model identities](models/model_manifest.json)
 
-- [Model archive part 1](https://chatgpt.com/library?file_id=libfile_f2c2db37c6f881a4b5d38bd8f8a7d4a9&account_id=f0aa4426-3e93-47d5-959c-1b8c17dea492) — Credit_Architecture_Model_Bundle.tar.part-001
-- [Model archive part 2](https://chatgpt.com/library?file_id=libfile_0b54649bcfd081a4b49654b6f7bbae01&account_id=f0aa4426-3e93-47d5-959c-1b8c17dea492) — Credit_Architecture_Model_Bundle.tar.part-002
-- [Model archive part 3](https://chatgpt.com/library?file_id=libfile_1d03eb53518481a48bbb981cb92b7749&account_id=f0aa4426-3e93-47d5-959c-1b8c17dea492) — Credit_Architecture_Model_Bundle.tar.part-003
-- [Model archive part 4](https://chatgpt.com/library?file_id=libfile_f82aac5e97d481a48d7ef79e7f31bd6b&account_id=f0aa4426-3e93-47d5-959c-1b8c17dea492) — Credit_Architecture_Model_Bundle.tar.part-004
+The public, reproducible path is the **pinned rebuild**. Native XGBoost weights,
+normalized trees, calibration and credit policy data are committed here. The
+larger Qwen and compiled attribution files are rebuilt from the pinned official
+model and source versions.
 
-From this experiment directory, run:
+## Rebuild from public sources
+
+After creating the environment in the [quickstart](docs/QUICKSTART.md):
 
 ```bash
-python scripts/restore_model_bundle.py /absolute/path/to/downloaded/parts --extract
+pip install torch --index-url https://download.pytorch.org/whl/cpu
+pip install -r requirements.txt
+python scripts/reproduce.py
 ```
 
-The script verifies the SHA-256 of each part using `models/archive_manifest.json`, joins the TAR and safely extracts it. The extracted directories contain the rebuilt original-layout Qwen3.5-0.8B base checkpoint and the separated model artifacts. Copy the `separated-models` contents into this project's `models/` directory, then run:
+The script obtains the official [Qwen3.5-0.8B model](https://huggingface.co/Qwen/Qwen3.5-0.8B)
+and the pinned [Qwenderwriter source](https://github.com/maximer-v/qwenderwriter),
+then builds both assessment paths. See [model_manifest.json](models/model_manifest.json)
+for exact source/model revisions and identities. It uses the common unadapted
+base writer, not the original author's fine-tuned release.
+
+## Restore a measured artifact bundle you already have
+
+The separately distributed model archive is 1.90 GB in four checksum-verified
+parts. Account-specific download URLs are intentionally not included in this
+public repository. Public repository access does not grant access to a private
+artifact store.
+
+If you have the four parts, put them in one directory and run:
+
+```bash
+python scripts/restore_model_bundle.py /absolute/path/to/parts --extract
+cp /absolute/path/to/parts/separated-models/* models/
+```
+
+The script verifies every SHA-256 against [archive_manifest.json](models/archive_manifest.json),
+joins the TAR and safely extracts it. The extracted directories contain:
+
+| Directory | Contents |
+| --- | --- |
+| `original-layout-base-checkpoint/` | The rebuilt bundled Qwen base checkpoint and deterministic buffers |
+| `separated-models/` | Standalone scorer/attribution tensors, policy data, native scorecard and metadata |
+| `licenses/` | Original implementation and official base-model licences/model card |
+
+The model archive does not contain the OPA executable. Follow the pinned OPA
+installation in the [quickstart](docs/QUICKSTART.md#install-opa-for-a-restored-artifact-set),
+then run:
 
 ```bash
 python scripts/demo.py --record
 python scripts/demo.py --checkpoint /absolute/path/original-layout-base-checkpoint
 ```
 
-This bundle contains the common unadapted base writer used in our measured comparison, not the author's LoRA-adapted writer. No model weights were fine-tuned for this experiment. Original author and base-model licence files are included in the archive. Native XGBoost weights are also committed directly to this repository.
+All recording is to a local sandbox. No weights were fine-tuned for this
+experiment. The implementation/model artefacts retain their respective licences.

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="610" viewBox="0 0 1600 610" role="img" aria-labelledby="title desc">
+<title id="title">Qwender, rearchitected</title><desc id="desc">Independent credit components, identical tested responses. Seven of seven response matches; 30,029 policy parity inputs; twelve workflow scenarios; sixty passing tests.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#708692"/></marker></defs>
+<rect width="1600" height="610" rx="24" fill="#102A39"/>
+<text x="64" y="67" fill="#90B9C5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="start" letter-spacing="3">QWENDER / REARCHITECTED</text>
+<text x="64" y="159" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="700" text-anchor="start">Separate the controls.</text>
+<text x="64" y="237" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="700" text-anchor="start">Preserve the decision.</text>
+<text x="67" y="310" fill="#C0D4DD" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" text-anchor="start">A credit architecture with an exact scorecard, external policy,</text>
+<text x="67" y="347" fill="#C0D4DD" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" text-anchor="start">a bounded Qwen writer and an independent execution gate.</text>
+<rect x="1050" y="72" width="486" height="102" rx="13" fill="#183746" stroke="#345463"/>
+<text x="1074" y="107" fill="#40C5B5" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">01</text>
+<text x="1124" y="108" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="start">SCORE + ATTRIBUTION</text>
+<text x="1124" y="142" fill="#BBD2DA" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Fixed-point tensors · independent artifact</text>
+<rect x="1050" y="196" width="486" height="102" rx="13" fill="#183746" stroke="#345463"/>
+<text x="1074" y="231" fill="#40C5B5" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">02</text>
+<text x="1124" y="232" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="start">CREDIT POLICY</text>
+<text x="1124" y="266" fill="#BBD2DA" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Rego rules + versioned policy data</text>
+<rect x="1050" y="320" width="486" height="102" rx="13" fill="#183746" stroke="#345463"/>
+<text x="1074" y="355" fill="#FFAD8D" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">03</text>
+<text x="1124" y="356" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="start">LANGUAGE WRITER</text>
+<text x="1124" y="390" fill="#BBD2DA" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Same Qwen3.5-0.8B · verified paragraph</text>
+<path d="M64 461 L1536 461" fill="none" stroke="#3A5665" stroke-width="1.5"/>
+<text x="64" y="526" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="41" font-weight="700" text-anchor="start">7 / 7</text>
+<text x="64" y="564" fill="#ABC8D3" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">identical credit responses</text>
+<text x="444" y="526" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="41" font-weight="700" text-anchor="start">30,029</text>
+<text x="444" y="564" fill="#ABC8D3" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">policy parity inputs</text>
+<text x="824" y="526" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="41" font-weight="700" text-anchor="start">12 / 12</text>
+<text x="824" y="564" fill="#ABC8D3" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">workflow control scenarios</text>
+<text x="1204" y="526" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="41" font-weight="700" text-anchor="start">60</text>
+<text x="1204" y="564" fill="#ABC8D3" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start">passing repository tests</text>
+</svg>

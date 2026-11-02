@@ -1,126 +1,248 @@
-# Credit Architecture Lab
+<p align="center">
+  <img src="docs/assets/hero.svg" alt="Qwender, rearchitected: separate the controls, preserve the decision. Seven of seven identical responses, 30,029 policy parity inputs, twelve workflow scenarios and sixty passing tests." width="100%">
+</p>
 
-A working, non-commercial comparison of Qwenderwriter's bundled credit engine
-and an independently designed component architecture for governed credit workflows.
+<h1 align="center">Qwender, rearchitected</h1>
 
-**Measured result:** all seven complete assessment JSON responses match when
-both paths use identical Qwen3.5-0.8B base weights, prompts and decoding. External
-OPA policy evaluation matches all 30,000 benchmark rows plus 29 boundary cases.
-The separate workflow controls pass 12/12 extension scenarios.
+<p align="center"><strong>Exact credit decisions. Independent policy. Bounded language. Explicit permission to act.</strong></p>
 
-This is a controlled architecture experiment. It does **not** reproduce the
-author's LoRA-adapted writer or its published 98.1% verification rate. Our common
-base writer produces three verified paragraphs out of five applicable requests
-in each arm, withholding two; the two malformed requests invoke no writer.
+<p align="center">
+  <img alt="Python 3.12" src="https://img.shields.io/badge/Python-3.12-152B3C?style=flat-square">
+  <img alt="Common writer Qwen3.5-0.8B" src="https://img.shields.io/badge/Qwen3.5-0.8B-007F78?style=flat-square">
+  <img alt="Policy runtime OPA 1.22.0" src="https://img.shields.io/badge/OPA-1.22.0-007F78?style=flat-square">
+  <img alt="60 verified tests in the recorded run" src="https://img.shields.io/badge/Recorded_tests-60_passed-007F78?style=flat-square">
+  <a href="LICENSE"><img alt="Non-commercial CC BY-NC 4.0" src="https://img.shields.io/badge/License-CC_BY--NC_4.0-B95138?style=flat-square"></a>
+</p>
 
-![Architecture comparison](docs/architecture_comparison.svg)
+<p align="center">
+  <a href="docs/Credit_Architecture_Research_Paper.pdf">Research paper</a> ·
+  <a href="docs/ARCHITECTURE.md">Architecture</a> ·
+  <a href="docs/RESULTS.md">Measured results</a> ·
+  <a href="docs/QUICKSTART.md">Run it</a> ·
+  <a href="DOWNLOAD_MODELS.md">Model downloads</a>
+</p>
 
-## Read the evidence
+A working credit-decision architecture that keeps the scorecard, credit policy,
+language writer and permission to record a result under separate controls. It
+reuses Qwenderwriter's exact scoring and attribution machinery, moves the credit
+outcome rules into a real OPA process, and introduces explicit evidence-context
+and execution boundaries.
 
-- [Research paper](docs/Credit_Architecture_Research_Paper.pdf)
-- [Exact paired requests, prompts and responses](results/paired_responses.json)
-- [Policy equivalence across 30,029 inputs](results/policy_parity.json)
-- [Workflow extension scenarios](results/governance_cases.json)
-- [Independent policy release experiment](results/policy_release.json)
-- [Recorded decision lineage](results/lineage_graph.json)
-- [Editable diagram](docs/architectures.mmd)
-- [Pinned model and source identities](models/model_manifest.json)
+**The result:** the seven tested credit assessments remain identical to the
+bundled path, while policy changes, context qualification and sandbox recording
+can be exercised independently. This repository contains the implementation,
+weights for the native scorecard, paired responses, control scenarios and a
+reproducible research report.
 
-## Components
+## One application. Two architectures. The same answer.
 
-| Component | Implementation |
-| --- | --- |
-| Standalone exact score and attribution | `creditlab/engine.py`, mechanically extracted `native_core.py`, separate safetensors artifact |
-| Feature calculations | `creditlab/features.py`; independent NumPy calculations |
-| Credit outcome policy | `policies/credit.rego` and `models/policy.json`; real OPA process |
-| Evidence and approval relationships | NetworkX graph in `creditlab/governance.py` |
-| Trusted context | Request/component hashes, policy identity, evidence source, age and tenant checks |
-| Language writer | `creditlab/writer.py`; same Qwen instance and greedy decoding in both experiment arms |
-| Response verification and recourse | Upstream algorithms retained in `creditlab/routing.py` for comparison |
-| Execution gate | Independent recording permission and context recheck |
-| Sandbox effects | SQLite idempotency ledger; linked, timestamped event graph |
-| Orchestration | `creditlab/workflow.py` |
+<p align="center">
+  <img src="docs/assets/sample_io.svg" alt="The decline fixture produces the same full assessment in both arms: demonstration decline, 69.9 percent raw model probability, elevated band, severe delinquency, one-move recourse and an identical verified explanation." width="100%">
+</p>
 
-These are modular Python components and an OPA subprocess, not a distributed
-microservices deployment. The graph is a minimal approval/lineage graph; source,
-age, principal and approval assertions are synthetic trusted fixtures. No actual
-credit decision is executed or sent to a customer.
+The [complete request](fixtures/decline_close_to_approval.json) is assessed twice:
+once through the original bundled class, once through the separated engine and
+OPA. Both arms actually generate their own paragraph using the same Qwen base
+weights, prompt and greedy decoding. There is no replayed or cached response.
 
-## Run
+The [paired record](results/decline_close_to_approval.json) preserves the input,
+prompts, evidence, raw generations, verification status, timings and full JSON.
 
-Python 3.12 and approximately 10 GB free space are recommended for the full rebuild.
-The project is intended for Linux x86-64, matching the pinned OPA binary.
+## Why separate the components?
+
+A credit score, an applicable policy and permission to record a decision answer
+different questions. They also change under different owners. This design makes
+those boundaries explicit and connects their identities in a trusted-context
+manifest.
+
+| Enterprise question | Implemented answer | Proof to inspect |
+| --- | --- | --- |
+| Can policy change without replacing the scorer or loading Qwen? | Separate Rego and policy-data artifacts | [Policy-only release](results/policy_release.json) |
+| Is this the approved policy and evidence context? | Policy-approval graph, source/tenant/freshness checks and component hashes | [Context controls](results/governance_cases.json) |
+| Can the writer alter the arithmetic? | The deterministic service has no language parameters | [Detached engine](creditlab/engine.py), [component tests](tests/test_components.py) |
+| Does assessment permission also authorize a write? | Separate assessment and recording permissions | [Execution gate](creditlab/governance.py) |
+| What if context changes or the same request is retried? | Recheck before recording; idempotent SQLite ledger | [Workflow cases](results/governance_cases.json) |
+
+The original already separates arithmetic from prose internally. Its strength is
+one self-contained checkpoint identity. Our architectural difference is
+independently governed artifacts plus a broader evidence-to-action workflow.
+
+## Architecture: evidence to decision to authorized action
+
+<p align="center">
+  <a href="docs/assets/architecture.svg"><img src="docs/assets/architecture.svg" alt="Four stages: qualify context; score and apply external policy; optionally write and verify an explanation; separately authorize a sandbox write and record linked lineage." width="100%"></a>
+</p>
+
+1. **Qualify.** Check the declared source, tenant, evidence age, current policy,
+   approval relationship and component identity; bind them to the request.
+2. **Assess.** Validate 23 raw fields, score with exact tensors, calculate the
+   policy features, ask OPA for the outcome, and compute evidence and recourse.
+3. **Explain.** Optionally let Qwen write from the fixed fact sheet. A rejected
+   paragraph is withheld; the structured assessment remains available.
+4. **Authorize.** Before a sandbox record, recheck the live context, require a
+   recording permission, deduplicate the write and link policy/evidence lineage.
+
+**Implemented deployment:** modular Python components and an OPA subprocess.
+The source, identity and approval assertions are research fixtures. The diagram
+does not imply deployed microservices, a live bureau integration or production
+identity infrastructure. [Read the component contracts and failure behavior →](docs/ARCHITECTURE.md)
+
+<details>
+<summary><strong>Compare the two release models</strong></summary>
+
+<p align="center">
+  <img src="docs/architecture_comparison.svg" alt="Original bundled checkpoint compared with separate context, score, policy, writer and execution boundaries." width="100%">
+</p>
+
+| Dimension | Original bundled path | This separated path |
+| --- | --- | --- |
+| Score and attribution | Compiled buffers in the Qwen checkpoint | Identical tensors in an independent artifact |
+| Credit-outcome rules | Tensor policy in the checkpoint | Versioned Rego rules and policy data |
+| Language | Writer attached to the checkpoint class | Same writer behind a callable interface |
+| Evidence applicability | Raw input contract and compiled-state checks | Additional policy approval, freshness, source and tenant checks |
+| Recording workflow | Outside the upstream assessment API | Explicit gate, SQLite ledger and linked lineage |
+| Operational trade-off | Fewer artifacts to distribute | More boundaries to govern, test and operate |
+
+Both designs can update policy without retraining the writer. The difference is
+whether that policy release remains coupled to a language-model package.
+</details>
+
+## Evidence, with direct links
+
+| Experiment | Measured result | Raw artifact |
+| --- | --- | --- |
+| Complete paired assessments | **7 / 7 identical JSON responses** | [All requests and responses](results/paired_responses.json) |
+| External credit-policy parity | **30,000 rows + 29 selected boundary cases; zero differences** | [Field-by-field parity](results/policy_parity.json) |
+| Workflow extensions | **12 / 12 expected control outcomes** | [Scenario log](results/governance_cases.json) |
+| Original repository tests | **43 passed**, plus 6 subtests | [Original test log](results/logs/upstream-tests-final.log) |
+| Added component/control tests | **17 passed** | [Added test log](results/logs/modular-tests.log) |
+| Independent policy release | **Decline → manual review; same margin and scorer hash** | [Release experiment](results/policy_release.json) |
+| Language verification | **3 / 5 paragraphs verified in each arm; 2 withheld** | [Run summary](results/summary.json) |
+
+The comparison uses the **same unadapted Qwen3.5-0.8B** in both arms. It isolates
+architecture; it does not reproduce the original author's LoRA-adapted writer or
+its published verification rate. The two malformed requests never invoke Qwen.
+The test badge reports this recorded run, not a hosted CI service.
+
+[Full methodology, case outcomes and interpretation →](docs/RESULTS.md)
+
+## Run a useful experiment
+
+### 1 · Exercise the governance controls without model weights
 
 ```bash
+git clone https://github.com/CodeDaim0n/qwender-rearchitected-repo.git
+cd qwender-rearchitected-repo
 python -m venv .venv
 source .venv/bin/activate
+pip install networkx pytest
+PYTHONPATH=. python -m pytest tests/test_governance.py -q
+```
+
+This lightweight path tests authority, stale context, missing approval,
+component changes and duplicate writes. It does not run the credit model.
+
+### 2 · Rebuild and compare the complete credit process
+
+```bash
 pip install torch --index-url https://download.pytorch.org/whl/cpu
 pip install -r requirements.txt
 python scripts/reproduce.py
 ```
 
-The rebuild fetches the exact upstream commit and official Qwen model revision,
-trains the scorecard using the original search, compiles score/TreeSHAP/policy,
-creates the original-layout base checkpoint, extracts independent artifacts, runs
-policy parity and paired language generation, then executes governance tests.
-An existing official snapshot can be reused with `--base /absolute/model/path`.
-`--no-language` skips generation but still reconstructs the original-layout
-checkpoint; it does not reproduce the published language experiment.
+The rebuild fetches pinned upstream source and official Qwen weights, trains the
+native scorecard, compiles its exact tensors and TreeSHAP, builds the bundled
+checkpoint, extracts separate artifacts and runs both assessment paths. It also
+runs policy parity and governance checks. No LoRA training is performed.
 
-After the model artifacts have been built or restored from the provided bundle:
+Already have the weights? Use `--base /absolute/path/to/qwen-snapshot`.
+To restore the exact measured artifacts, follow [Model downloads](DOWNLOAD_MODELS.md).
+
+### 3 · Run the separated workflow
+
+After rebuilding or restoring the compiled artifacts and OPA binary:
 
 ```bash
 python scripts/demo.py --record
 python scripts/demo.py --request fixtures/decline_close_to_approval.json
-python scripts/demo.py --checkpoint /absolute/original-layout-base-checkpoint
-PYTHONPATH=. python -m pytest tests -q
+python scripts/demo.py --checkpoint /absolute/path/original-layout-base-checkpoint
 ```
 
-The first two commands load no Qwen weights. The third attaches the same writer
-to the separated workflow. All recording is to a local sandbox ledger.
+The first two commands need no Qwen weights. The third attaches the writer.
+All recording is to a local sandbox. [Installation, artifact restoration and troubleshooting →](docs/QUICKSTART.md)
 
-## Models and packaging
+## Use the component API
 
-[Download the exact measured model bundle and restore it](DOWNLOAD_MODELS.md).
+```python
+import json
+from creditlab.workflow import CreditWorkflow
+from creditlab.governance import valid_context
 
+workflow = CreditWorkflow("models")
+with open("fixtures/approval_with_controls.json") as stream:
+    request = json.load(stream)
 
-Native XGBoost weights, the normalized tree representation, calibration, policy
-bundles, metadata and model identities are versioned here. The ~61 MiB compiled
-attribution artifact and the ~1.7 GB Qwen checkpoint are provided in the separate
-model bundle and regenerated by `scripts/reproduce.py`; they are not ordinary
-Git blobs in this experiment directory. No Git LFS upload is implied.
+result = workflow.assess(
+    request,
+    context=valid_context(),  # Synthetic trusted context for this local experiment.
+    case_id="example-001",
+    record=True,
+)
+print(result["assessment"]["decision"]["outcome"])
+print(result["assessment"]["model"]["probability_pct"])
+print(result["record_status"])
+```
 
-`models/model_manifest.json` pins the official Qwen revision and file hash, OPA
-version and binary hash, and upstream commit. The extracted score engine has no
-language parameters. Original score grading metadata is retained for exact
-parity, while all demonstration credit-outcome rules run through OPA.
+```text
+approval with controls
+5.8%
+RECORDED
+```
 
-## Interpretation
+[Inspect the complete recorded response](results/demo_response.json), including
+its trusted-context manifest. `CreditWorkflow` can receive an optional writer
+callable; its deterministic engine can be deployed without loading Qwen.
 
-- Separation preserved the tested decisions, recourse, receipts and generated
-  responses; it did not improve underwriting or explanation quality.
-- Workflow controls are an added capability. The original assessment API has no
-  external recording workflow, so we do not label it as making unsafe writes.
-- A synthetic policy-only release changed decline to manual review while keeping
-  the score and scorer artifact unchanged, without loading Qwen.
-- The original can also recompile policy without retraining the writer. Our
-  difference is the independent policy artifact/runtime boundary.
-- Single-run timing is descriptive only. We claim no performance or cost gain.
-- The original verifier's semantic limitations and bounded, non-causal recourse
-  remain. No fairness, temporal validation, regulatory approval or production IAM
-  capability is claimed.
+## Explore the repository
+
+| Path | What it contains |
+| --- | --- |
+| [`creditlab/`](creditlab/) | Scoring facade, feature calculations, OPA adapter, writer, routing, governance and orchestration |
+| [`policies/`](policies/) | Executable Rego credit policy |
+| [`models/`](models/) | Native XGBoost weights, normalized trees, calibration, policy bundles and pinned identities |
+| [`fixtures/`](fixtures/) | The seven original request fixtures |
+| [`results/`](results/) | Paired responses, policy parity, workflow scenarios, lineage and build/test logs |
+| [`scripts/`](scripts/) | Rebuild, extract, compare, demonstrate, restore models and regenerate documentation |
+| [`tests/`](tests/) | Component integrity and governance regression tests |
+| [`docs/`](docs/) | Research paper, architecture, results, quickstart and editable vector figures |
+
+## Research scope and next steps
+
+This is an implemented research prototype on historical UCI credit-card data and
+a synthetic policy. It demonstrates tested response equivalence and explicit
+control boundaries. It does not establish better underwriting, lower inference
+cost, regulatory compliance or production readiness.
+
+The remaining enterprise work is concrete: authenticate source and identity
+assertions, introduce a signed approval registry, make audit lineage durable,
+validate the portfolio over time and across groups, and test real service
+isolation and operational failure modes. The existing verifier's semantic
+limits and bounded, non-causal recourse remain. [Detailed boundaries →](docs/ARCHITECTURE.md#deployment-boundaries)
 
 ## Attribution and licence
 
-Original implementation: Javier Mancilla, with pair review/co-authorship by
-Tomas Tagliani, SquareOne Labs. Source:
-https://github.com/maximer-v/qwenderwriter at commit
+Independent architecture experiment built on the exact credit machinery of
+[Qwenderwriter](https://github.com/maximer-v/qwenderwriter), conceived and built by
+**Javier Mancilla**, with pair review and paper co-authorship by **Tomas Tagliani**,
+SquareOne Labs. The source is pinned to
 `8d6015075d421eb1102db6dcc48a1caa62f84828`.
 
-Original paper:
-https://github.com/maximer-v/qwenderwriter/blob/main/paper/Qwenderwriter.pdf
+[Original paper](https://github.com/maximer-v/qwenderwriter/blob/main/paper/Qwenderwriter.pdf) ·
+[Our research paper](docs/Credit_Architecture_Research_Paper.pdf) ·
+[Third-party notices](THIRD_PARTY_NOTICES.md)
 
-This derivative experiment preserves **CC BY-NC 4.0**. See `LICENSE` and
-`THIRD_PARTY_NOTICES.md`. Base Qwen weights are Apache-2.0; UCI data is CC BY 4.0.
-New components, diagrams and report are supplied for the same non-commercial
-research purpose. This is not a production lending product.
+This derivative experiment preserves **CC BY-NC 4.0**. See [LICENSE](LICENSE).
+Official Qwen base weights are Apache-2.0; UCI data is CC BY 4.0. Native XGBoost
+weights are committed here. Larger Qwen and compiled attribution artifacts are
+available through the [restore guide](DOWNLOAD_MODELS.md) and pinned rebuild;
+ordinary Git blobs do not contain the full Qwen checkpoint.

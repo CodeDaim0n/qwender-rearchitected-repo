@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="750" viewBox="0 0 1600 750" role="img" aria-labelledby="title desc">
+<title id="title">One application, two architectures, the same measured response</title><desc id="desc">The published decline fixture produces the same complete assessment in the bundled and separated arms: decline, 69.9 percent model probability, elevated risk, severe delinquency, and one-move recourse.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#708692"/></marker></defs>
+<rect width="1600" height="750" rx="24" fill="#FFFFFF"/>
+<text x="52" y="60" fill="#007F78" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start" letter-spacing="2">ONE APPLICATION. TWO ARCHITECTURES.</text>
+<text x="52" y="109" fill="#152B3C" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" text-anchor="start">The output is equivalent. The control boundaries are different.</text>
+<rect x="48" y="151" width="610" height="427" rx="18" fill="#102A39" stroke="#102A39"/>
+<text x="76" y="198" fill="#8DBAC4" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="start" letter-spacing="2">REQUEST</text>
+<text x="77" y="241" fill="#E1ECF0" font-family="DejaVu Sans Mono, monospace" font-size="21" font-weight="400" text-anchor="start">{</text>
+<text x="77" y="270" fill="#E1ECF0" font-family="DejaVu Sans Mono, monospace" font-size="21" font-weight="400" text-anchor="start">  &quot;action&quot;: &quot;ASSESS&quot;,</text>
+<text x="77" y="299" fill="#E1ECF0" font-family="DejaVu Sans Mono, monospace" font-size="21" font-weight="400" text-anchor="start">  &quot;credit&quot;: {</text>
+<text x="77" y="328" fill="#E1ECF0" font-family="DejaVu Sans Mono, monospace" font-size="21" font-weight="400" text-anchor="start">    &quot;LIMIT_BAL&quot;: 200000,</text>
+<text x="77" y="357" fill="#E1ECF0" font-family="DejaVu Sans Mono, monospace" font-size="21" font-weight="400" text-anchor="start">    &quot;AGE&quot;: 39,</text>
+<text x="77" y="386" fill="#E1ECF0" font-family="DejaVu Sans Mono, monospace" font-size="21" font-weight="400" text-anchor="start">    &quot;PAY_0&quot;: 3,</text>
+<text x="77" y="415" fill="#E1ECF0" font-family="DejaVu Sans Mono, monospace" font-size="21" font-weight="400" text-anchor="start">    &quot;PAY_2&quot;: 2,</text>
+<text x="77" y="444" fill="#E1ECF0" font-family="DejaVu Sans Mono, monospace" font-size="21" font-weight="400" text-anchor="start">    &quot;...&quot;: &quot;19 other original fields&quot;</text>
+<text x="77" y="473" fill="#E1ECF0" font-family="DejaVu Sans Mono, monospace" font-size="21" font-weight="400" text-anchor="start">  }</text>
+<text x="77" y="502" fill="#E1ECF0" font-family="DejaVu Sans Mono, monospace" font-size="21" font-weight="400" text-anchor="start">}</text>
+<text x="75" y="555" fill="#A6C7D1" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Request excerpt; run the complete 23-field JSON fixture.</text>
+<rect x="710" y="151" width="842" height="427" rx="18" fill="#F4F7F9" stroke="#CFDCE3"/>
+<text x="740" y="198" fill="#007F78" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" text-anchor="start" letter-spacing="1">SAME RESPONSE IN BOTH ARMS</text>
+<text x="740" y="256" fill="#152B3C" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="700" text-anchor="start">Demonstration Decline</text>
+<text x="740" y="305" fill="#B95138" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" text-anchor="start">69.9%</text>
+<text x="905" y="300" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start">raw model probability · elevated band</text>
+<text x="741" y="357" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" text-anchor="start" letter-spacing="1">CONTROLLING RULE</text>
+<text x="741" y="385" fill="#152B3C" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="600" text-anchor="start">Severe delinquency</text>
+<text x="741" y="414" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" text-anchor="start" letter-spacing="1">RECOURSE</text>
+<text x="741" y="442" fill="#152B3C" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="600" text-anchor="start">1 move to approval with controls</text>
+<text x="741" y="471" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" text-anchor="start" letter-spacing="1">EXPLANATION</text>
+<text x="741" y="499" fill="#152B3C" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="600" text-anchor="start">Verified paragraph; text matches exactly</text>
+<text x="741" y="528" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" text-anchor="start" letter-spacing="1">ASSESSMENT JSON</text>
+<text x="741" y="556" fill="#152B3C" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="600" text-anchor="start">Identical, including evidence and receipt</text>
+<path d="M658 364 L710 364" fill="none" stroke="#708692" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="48" y="611" width="1504" height="90" rx="14" fill="#E8F3EF" stroke="#BFDAD2"/>
+<text x="76" y="649" fill="#007F78" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="start" letter-spacing="1">PARITY CHECK</text>
+<text x="270" y="650" fill="#152B3C" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" text-anchor="start">Same application + same tensors + same Qwen + same prompt + same decoding</text>
+<text x="76" y="680" fill="#526777" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Measured fixture: decline_close_to_approval.json. Demonstration policy on historical UCI data; no real lending decision.</text>
+</svg>
